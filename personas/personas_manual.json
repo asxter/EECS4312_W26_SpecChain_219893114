@@ -1,22 +1,351 @@
 {  "personas": [
+{
+  "id": "P1",
+  "name": "Cost-Sensitive Mental Health Seeker",
+  "description": "A user seeking mental health support through the app but who is highly sensitive to cost and becomes frustrated when essential features are locked behind paywalls after initial engagement.",
+  "derived_from_group": "G1",
+  "goals": [
+    "Access meaningful mental health insights without needing to pay immediately",
+    "Track mood and emotional patterns over time",
+    "Receive actionable feedback or reports based on their input",
+    "Use the app as a substitute or supplement to therapy",
+    "Engage with the app consistently without interruption",
+    "Explore features before deciding whether to pay",
+    "Feel that their time investment in answering questions leads to value"
+  ],
+  "pain_points": [
+    "Core features such as reports and insights are locked behind a paywall",
+    "Users only discover pricing after investing time in the app",
+    "Subscription costs are perceived as too high relative to value",
+    "Free version becomes useless after trial period ends",
+    "Feeling misled or tricked into engaging before encountering payment",
+    "Limited access prevents meaningful mental health support",
+    "Frustration when vulnerable users are required to pay for help",
+    "Perception that the app exploits mental health struggles for profit"
+  ],
+  "context": [
+    "Using the app during periods of emotional distress or mental health struggles",
+    "Often turning to the app as an affordable alternative to therapy",
+    "May be students, unemployed, or financially constrained individuals",
+    "Engaging with the app daily (e.g., answering questions over multiple days)",
+    "Expecting gradual insights or results after consistent use",
+    "Likely to abandon the app once payment is required",
+    "May already feel vulnerable or frustrated before encountering paywalls"
+  ],
+  "constraints": [
+    "Essential features (e.g., reports, insights) must be accessible without mandatory payment",
+    "Pricing must be clearly communicated before significant user investment",
+    "Free users should still receive meaningful value",
+    "The system must avoid delaying paywall exposure after long usage",
+    "Subscription pricing should be proportional to perceived benefit",
+    "Users should not lose access to previously generated data or insights",
+    "The app should not require payment at moments of peak user vulnerability"
+  ],
+  "evidence_reviews": [ "The G1 reviews, same with following personas, just entering review ID as per the template",
+        "4cf4ff8a-3aec-4219-ba79-5cc645cc1b15",
+        "a360c212-f023-438c-991b-a3f28f3dd7ba",
+        "b7e23fb5-2b6e-4cf8-bd4c-0ec67b273a1a",
+        "81c6e690-0ce4-4d0f-acf6-e2678939e1aa",
+        "c086cabd-06df-428e-bbba-864e4bd0778c",
+        "3d61709a-0872-45b0-a4d8-27d8db423c5a",
+        "39ef38ce-b7ed-4ad1-b391-98344d8e366d",
+        "affef279-7511-46e8-b4e4-8f9cc6da0a2b",
+        "f1c683f8-e041-444a-a0de-03c9c64e352f",
+        "f7f92b4a-fa1c-406e-a550-7ffad9f8b678",
+        "fad46f60-a4fe-45ed-8e73-515e505a9cf5",
+        "c048ffab-74fe-483c-8542-45a4fae1f743",
+        "2e69a0d8-f877-4ae3-b33d-60aa01f8ac85"  ]
+}
+
     {
-      "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
-      "derived_from_group": "G1",
-      "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
-      "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
-      "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
-      "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
-      "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+  "id": "P2",
+  "name": "Reliability-Dependent Daily User",
+  "description": "A user who depends on the app for ongoing mental health tracking and becomes highly frustrated when bugs, crashes, blank screens, login failures, or connection errors interrupt usage.",
+  "derived_from_group": "G2",
+  "goals": [
+    "Open the app reliably whenever needed",
+    "Log responses and mood entries without interruption",
+    "Access previously saved data and progress history",
+    "Use premium and non-premium features without technical failures",
+    "Maintain a consistent mental health tracking routine",
+    "Trust that app updates will improve, not break, functionality",
+    "Continue long-term use without fear of sudden app failure"
+  ],
+  "pain_points": [
+    "Blank screens prevent answering questions",
+    "The app stops working after updates",
+    "Login failures block access to personal records",
+    "False internet or connection errors appear despite working service",
+    "Users cannot access content or navigate tabs",
+    "Technical issues disrupt established daily routines",
+    "Reinstalling the app does not always solve the issue",
+    "Customer support may be slow or unhelpful"
+  ],
+  "context": [
+    "Using the app repeatedly over weeks, months, or years",
+    "Opening the app in response to daily prompts or personal need",
+    "Relying on the app during emotionally difficult periods",
+    "Already having entered significant personal data and history",
+    "Possibly paying for premium features and expecting stability",
+    "Experiencing issues after updates, reinstallations, or login attempts",
+    "Feeling disappointed because the app was previously useful"
+  ],
+  "constraints": [
+    "Core app flows must remain functional after updates",
+    "Users must be able to log in consistently",
+    "Saved data and history must remain accessible",
+    "Questionnaires and insights must load reliably",
+    "Errors must be accurate and not falsely blame connectivity",
+    "Bug fixes should be fast for high-impact failures",
+    "The system must not force users to reinstall to regain basic access"
+  ],
+  "evidence_reviews": [
+        "abe48d35-6cad-40f8-b5d9-a176ee371a4e",
+        "d66b13fb-dbd2-46e3-b70d-823311ff5a97",
+        "b0585e2b-d036-484b-a416-42d89d21e654",
+        "a585b5de-6b4a-4979-86f3-8238534857b9",
+        "008e22c8-46db-499e-8512-172b8fd6deac",
+        "39b7681d-28ed-4209-9b6d-f50668ded696",
+        "4a9b3a17-d2ae-4252-b2f9-91e05373a33c",
+        "1203993a-3f40-4a51-bba5-ea661049b9c3",
+        "6d93d49e-f641-4739-99fb-b1c1073318cd",
+        "a4262406-d7bd-46ea-84f2-caf84b308ff5",
+        "231e7e26-fc70-4c19-8054-2489fec6cda4",
+        "2252cfeb-b3c2-4d76-ad46-1369720d4389",
+        "d8a6ff9a-0c1e-4fb1-9dc2-a8fb0be9a822"
+  ]
+}
+{
+  "id": "P3",
+  "name": "Privacy-Conscious Sensitive-Data User",
+  "description": "A user who is willing to use the app for mental health support only if personal information, account access, and historical data are handled securely, transparently, and with user control.",
+  "derived_from_group": "G3",
+  "goals": [
+    "Use the app without unnecessary tracking or third-party sharing",
+    "Understand how personal and health information is handled",
+    "Retain control over whether an account is required",
+    "Keep journal entries and historical data safe over time",
+    "Recover or preserve data across reinstalls or device changes",
+    "Trust the app with sensitive emotional and mental health information",
+    "Use essential features without feeling coerced into data-sharing agreements"
+  ],
+  "pain_points": [
+    "Third-party sharing of device or personal data",
+    "Mandatory account creation for basic use",
+    "Requests for too much personal information too early",
+    "Lack of anonymous or offline usage options",
+    "Loss of past data, exported data, or lifetime access",
+    "Account creation failures that block saving progress",
+    "App lock or security-related features not behaving reliably",
+    "Feeling that privacy tradeoffs are hidden or unfair"
+  ],
+  "context": [
+    "Using the app for highly sensitive mental health reflection",
+    "Entering personal emotional history, symptoms, and journal data",
+    "Possibly sharing app results with therapists or doctors",
+    "Using the app over long periods and accumulating important history",
+    "Changing devices, reinstalling, or trying to restore saved progress",
+    "Evaluating whether the app is trustworthy enough to keep using",
+    "Being especially cautious because mental health data is more sensitive than normal app data"
+  ],
+  "constraints": [
+    "Sensitive data handling must be transparent and easy to understand",
+    "Users should not be forced into unnecessary data-sharing to access core features",
+    "Account creation must be reliable if required",
+    "Users should be able to preserve or restore their own data",
+    "Security features such as app lock must work consistently",
+    "Historical records must not disappear unexpectedly",
+    "Privacy choices must be surfaced before major personal disclosure"
+  ],
+  "evidence_reviews": [
+        "b69f4ef9-7d53-4e38-817e-9e506d787b03",
+        "8d328b9d-9b41-4bfc-a52f-24f5ac10f6b1",
+        "a01eb69d-877f-4ec3-8ada-e94608e0f2fd",
+        "fbdbce6a-fe56-4273-a957-af833fce24a7",
+        "d13b100a-d4f2-4ae7-9ca6-4a2013cd817e",
+        "eb334c9d-9486-443b-a05e-a32a25d0acdc",
+        "7725c06f-d31f-476d-a40a-afcb9f8dd42b",
+        "0f7939ee-4dbc-4869-a5e1-ef432e2d5e8c",
+        "c6477fab-eed5-4fcd-a0eb-0421678b829b",
+        "adb16f3c-49f6-4eef-8834-1ebfe8841c3f",
+        "744bfb68-393d-4e8b-9d4b-f61a08e26fbf",
+        "04c09e56-8e1b-40fd-9e67-d0cf0490b17d",
+        "1e0d7211-0786-46dc-a2bd-5a2f0f991679"
+  ]
+}
+{
+  "id": "P4",
+  "name": "Reminder-Dependent Routine Builder",
+  "description": "A user who relies on reminders and notifications to maintain a consistent check-in habit and whose engagement drops sharply when notifications are mistimed, excessive, missing, or unreliable.",
+  "derived_from_group": "G4",
+  "goals": [
+    "Receive reminders at the right times to complete check-ins",
+    "Build a stable mood-tracking routine over days and weeks",
+    "Avoid missing questionnaires due to weak notification support",
+    "Use reminders as a prompt during difficult periods",
+    "Stay engaged without being overwhelmed by notification volume",
+    "Trust that the app will continue reminders consistently",
+    "Get enough prompts to complete evaluations and reports"
+  ],
+  "pain_points": [
+    "Notifications stop appearing altogether",
+    "Reminder timing is inconvenient or easy to miss",
+    "Too many notifications become intrusive or annoying",
+    "Too few reminders make habit formation difficult",
+    "Missing reminders causes missed questionnaires and reduced data quality",
+    "Notification failures create frustration and anxiety",
+    "The app stops prompting after missed entries when the user needs support most",
+    "Users cannot rely on reminders to sustain mental health routines"
+  ],
+  "context": [
+    "Using the app as part of a daily or multi-times-per-day routine",
+    "Depending on prompts because manual check-ins are easy to forget",
+    "Trying to build consistency during stressful or low-motivation periods",
+    "Using the app over extended periods and expecting reminder stability",
+    "Needing enough answered questions to obtain evaluations or insights",
+    "Balancing mental health support with busy daily schedules",
+    "Sometimes wanting customizable intensity rather than one fixed reminder pattern"
+  ],
+  "constraints": [
+    "Reminder delivery must be reliable over long-term use",
+    "Users should be able to receive prompts frequently enough to stay engaged",
+    "Notification timing should be appropriate and configurable",
+    "The app should not silently reduce reminder support after missed entries",
+    "Users must be able to complete required check-ins without reminder failures",
+    "Reminder behavior should support both busy and vulnerable users",
+    "Notifications must not be so excessive that they drive disengagement"
+  ],
+  "evidence_reviews": [
+        "4d818c25-71e6-49f1-8a43-1c7cfd90e226",
+        "db7ae432-6ed4-4245-8d79-098f4b49f2a4",
+        "9f647e59-599a-4a00-a893-7a037aaea27b",
+        "5eb82c4a-34d9-4ee6-bb48-2bc98f5dcc20",
+        "f76b46c8-8a45-4ae2-b487-159f1ba986c1",
+        "3ea0b7a3-7e96-4f95-8d39-bb77ffaf10b3",
+        "0546ea68-4b3b-4791-8a88-e09ed9c9fd35",
+        "6ef3608d-21d9-4023-9a68-ece16a6da572",
+        "95fe0295-c662-444c-912f-4385d1f9b459",
+        "1bcdc380-96f4-48e4-b36d-9b870ad9b264",
+        "c1b895f5-3b08-4d86-8286-bc565bf6160c",
+        "0290564f-afe1-49df-b12d-d03504a9cfcb",
+        "9f39ad00-1dae-4860-82bc-dc6a3c4f446d"
+  ]
+}
+{
+  "id": "P5",
+  "name": "Questionnaire-Fatigued User Seeking Relevant Insights",
+  "description": "A user who wants meaningful reflection and mental health support but becomes disengaged when questions feel repetitive, irrelevant, overly generic, too long, or mismatched to personal circumstances.",
+  "derived_from_group": "G5",
+  "goals": [
+    "Receive questions that feel personally relevant",
+    "Gain meaningful insights from repeated app use",
+    "Avoid wasting time on repetitive or generic prompts",
+    "Use the app to understand specific emotional patterns",
+    "Feel that questionnaires reflect real-life circumstances",
+    "Complete check-ins without being overwhelmed by text or repetition",
+    "See clear value from the effort spent answering questions"
+  ],
+  "pain_points": [
+    "Questions become repetitive over time",
+    "Some prompts do not match the user’s situation or lifestyle",
+    "Follow-up questions can feel awkward or ill-fitting",
+    "Questionnaires may feel superficial rather than insightful",
+    "Too much text makes the experience tiring or disengaging",
+    "The app may assume all users are healthy, employed, or similarly situated",
+    "Reports are perceived as generic or low-value",
+    "Users invest effort without receiving proportionate insight"
+  ],
+  "context": [
+    "Using the app repeatedly enough to notice recurring question patterns",
+    "Seeking more than simple mood logging—wanting actual guidance or understanding",
+    "Possibly dealing with disability, stress, shift work, or other nonstandard circumstances",
+    "Trying to reflect honestly but feeling the app does not fit their reality",
+    "Reading prompts while already mentally tired or emotionally strained",
+    "Comparing the app against therapy, other apps, or prior self-help experience",
+    "Evaluating whether continued use is worth the effort"
+  ],
+  "constraints": [
+    "Question sets must remain varied over time",
+    "Prompts must be relevant to diverse user situations",
+    "The system must avoid assumptions that exclude disabled or nonstandard users",
+    "Questionnaire text should be manageable for stressed users",
+    "Insights and reports must feel meaningfully connected to user inputs",
+    "The app should adapt to user context rather than repeating generic prompts",
+    "Users should receive value proportional to the effort of repeated check-ins"
+  ],
+  "evidence_reviews": [
+        "e45752e5-ba84-41b6-be18-d6a920a2f523",
+        "74cf37a5-1864-4d8f-bbd2-befe6d3f428d",
+        "90970984-6996-464e-a369-75b868574eeb",
+        "75bf3047-c5e8-4c3f-a0cf-8f1453ae9e09",
+        "967136a2-4e76-484b-99d1-6717ce5f89d9",
+        "99662db6-51dd-416c-80c3-1150cb7c75d1",
+        "007bd2be-2826-4067-860b-c5654fe75c1a",
+        "1bd43c7c-4f5e-41c4-bb2c-4b8c268913ae",
+        "d7d8d31e-ab92-4c59-96b4-75e5c76c0579",
+        "8a4f00c5-1f58-4bee-a59f-9f99821c47cb",
+        "bbe680a1-bdde-4a3f-9908-db49aa9365c7",
+        "ef1ea885-2462-4a65-bcd2-7d78bf4a9271",
+        "3ac489ca-d7cc-4e9d-91ee-755bab9e788e"
+  ]
+}
+{
+  "id": "P6",
+  "name": "Engaged Self-Reflection User",
+  "description": "A user who values the app as a meaningful mental health companion, uses it consistently for reflection and mood tracking, and appreciates clear insights, structured exercises, and supportive daily engagement.",
+  "derived_from_group": "G6",
+  "goals": [
+    "Track mood and mental state consistently over time",
+    "Reflect on thoughts and feelings in a structured way",
+    "Receive useful insights, exercises, and reports",
+    "Use the app alongside therapy or professional care",
+    "Build self-awareness and emotional understanding",
+    "Feel supported by daily check-ins and app content",
+    "Continue using the app long term because it is genuinely helpful"
+  ],
+  "pain_points": [
+    "A good experience can still be weakened by small feature gaps",
+    "Limited emotion options or minor missing features reduce usefulness",
+    "Helpful users may still want clearer tracking or richer support",
+    "If quality declines over time, highly engaged users lose trust quickly",
+    "Even satisfied users may need smoother professional integration"
+  ],
+  "context": [
+    "Using the app regularly and often enthusiastically",
+    "Relying on the app for self-reflection during difficult periods",
+    "Sometimes using it with therapist guidance or sharing results externally",
+    "Seeing the app as more than a tracker—as a support tool or companion",
+    "Responding positively to reminders, exercises, and daily insights",
+    "Likely to recommend the app to others when it delivers consistent value",
+    "Interested in long-term personal growth, not just short-term symptom logging"
+  ],
+  "constraints": [
+    "The app must preserve the clarity and usefulness of its existing core experience",
+    "Insights, exercises, and reports should remain high-quality and actionable",
+    "Mood tracking should stay simple enough for regular use",
+    "Features should support long-term engagement without becoming repetitive",
+    "The system should remain suitable for use alongside therapy or doctor visits",
+    "Helpful support features should be easy to access and understand",
+    "The app should maintain user trust through consistent quality"
+  ],
+  "evidence_reviews": [
+        "6f006dd6-ee8c-44db-b8c8-2b5ad3570d1c",
+        "744404cb-b45b-4d48-a82d-aad7f42ecb69",
+        "4b916b6a-3876-4c25-b88e-2a097e9effa1",
+        "89f457e0-90a6-4570-955a-696bce251acd",
+        "6845c4de-e79c-4502-a20c-1ee0489bbb7e",
+        "735dd19a-1b69-4ce1-81a9-77c33b5312d1",
+        "5036b45c-d0ea-4320-8218-611ca36535d1",
+        "bbb31449-236a-4773-87be-97b1b0c64a8d",
+        "bc24eb71-77c8-4ef8-82ba-dbc6c03d5e4c",
+        "8ed59960-bd0f-4d5f-b05b-fb11e2934a77",
+        "becdaea2-c8f7-41c9-a504-e7727dc8c328",
+        "36e0167b-6774-4bc1-8705-58458a707ab1",
+        "047a3cf0-21a2-4f91-b29c-05fa163ebee9"
+  ]
+}
+
+
+    
+] 
+}
