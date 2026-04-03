@@ -1,16 +1,499 @@
-
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
+      "test_id": "T_manual_1",
       "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "scenario": "Free Summary Report After Initial Assessment Completion",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Create a new user account or use a user with no completed assessment",
+        "Complete the full initial assessment period required by the app",
+        "Finish the final assessment check-in without starting a subscription"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The system displays at least one viewable summary report without requiring payment."
+    },
+    {
+      "test_id": "T_manual_2",
+      "requirement_id": "FR1",
+      "scenario": "Free User Can Open Generated Initial Summary Report",
+      "steps": [
+        "Use a free user account that has already completed the initial assessment period",
+        "Navigate to the reports or summary section",
+        "Open the generated initial summary report"
+      ],
+      "expected_result": "The initial summary report opens successfully and is viewable without a subscription purchase."
+    },
+    {
+      "test_id": "T_manual_3",
+      "requirement_id": "FR1",
+      "scenario": "No Payment Prompt Required to View First Assessment Summary",
+      "steps": [
+        "Use a free user account that has just completed the initial assessment period",
+        "Attempt to access the first generated report immediately after completion",
+        "Observe whether a paywall or purchase prompt blocks access"
+      ],
+      "expected_result": "The user can view the first generated summary report without being blocked by a payment requirement."
+    },
+    {
+      "test_id": "T_manual_4",
+      "requirement_id": "FR2",
+      "scenario": "Pricing Disclosure Before Initial Assessment Begins",
+      "steps": [
+        "Install and open the app as a new user",
+        "Proceed to the point immediately before starting the initial assessment",
+        "Review the pricing or feature disclosure screen"
+      ],
+      "expected_result": "The screen lists free features, paid features, subscription price, billing period, and renewal status before the user proceeds."
+    },
+    {
+      "test_id": "T_manual_5",
+      "requirement_id": "FR2",
+      "scenario": "Pricing Disclosure Before Premium Trial Starts",
+      "steps": [
+        "Open the app with a user who has not started a premium trial",
+        "Select the option to start a premium trial",
+        "Review the information shown before confirming the trial"
+      ],
+      "expected_result": "The system discloses which features are free, which require payment, the price, billing period, and whether billing renews automatically before the trial starts."
+    },
+    {
+      "test_id": "T_manual_6",
+      "requirement_id": "FR2",
+      "scenario": "Renewal Status Visible on Pricing Screen",
+      "steps": [
+        "Navigate to a premium purchase or trial start screen",
+        "Inspect the subscription details shown before acceptance",
+        "Look for auto-renewal information"
+      ],
+      "expected_result": "The pricing screen explicitly states whether billing renews automatically."
+    },
+    {
+      "test_id": "T_manual_7",
+      "requirement_id": "FR3",
+      "scenario": "Existing Reports Remain Viewable After Subscription Cancellation",
+      "steps": [
+        "Use a subscribed account with previously generated reports",
+        "Cancel the subscription",
+        "Navigate to the reports section after cancellation"
+      ],
+      "expected_result": "Previously generated reports remain viewable after subscription cancellation."
+    },
+    {
+      "test_id": "T_manual_8",
+      "requirement_id": "FR3",
+      "scenario": "Existing Journal Entries Remain Accessible After Subscription Expiry",
+      "steps": [
+        "Use an account with saved journal entries and an active subscription",
+        "Allow the subscription to expire",
+        "Open the journal history section"
+      ],
+      "expected_result": "Previously saved journal entries remain accessible after subscription expiry."
+    },
+    {
+      "test_id": "T_manual_9",
+      "requirement_id": "FR3",
+      "scenario": "Existing History Remains Available Without Renewing Subscription",
+      "steps": [
+        "Use an account with prior mood history, reports, and saved entries",
+        "End or cancel the subscription without renewing",
+        "Access the history section"
+      ],
+      "expected_result": "The user can still view previously generated reports, history, and journal entries without renewing the subscription."
+    },
+    {
+      "test_id": "T_manual_10",
+      "requirement_id": "FR4",
+      "scenario": "Successful Cold Launch to Interactive Screen",
+      "steps": [
+        "Install the app on a supported device with working internet connectivity",
+        "Launch the app from a closed state",
+        "Wait for startup to complete"
+      ],
+      "expected_result": "The app opens to an interactive dashboard or questionnaire screen without crashing or showing a blank screen."
+    },
+    {
+      "test_id": "T_manual_11",
+      "requirement_id": "FR4",
+      "scenario": "Launch From Notification Opens Functional Questionnaire Screen",
+      "steps": [
+        "Use a supported device with working connectivity and an active app notification",
+        "Tap the app notification",
+        "Observe the screen that opens"
+      ],
+      "expected_result": "The app opens to a functional interactive screen and does not display a blank screen or crash."
+    },
+    {
+      "test_id": "T_manual_12",
+      "requirement_id": "FR4",
+      "scenario": "Relaunch After Force Close Remains Stable",
+      "steps": [
+        "Open the app on a supported device with working connectivity",
+        "Force close the app",
+        "Launch the app again"
+      ],
+      "expected_result": "The app relaunches to an interactive dashboard or questionnaire screen without crashing or showing a blank screen."
+    },
+    {
+      "test_id": "T_manual_13",
+      "requirement_id": "FR5",
+      "scenario": "Valid Sign-In Loads Saved History",
+      "steps": [
+        "Open the app sign-in screen",
+        "Enter valid account credentials",
+        "Submit the sign-in request"
+      ],
+      "expected_result": "The user is authenticated successfully and their saved history is displayed."
+    },
+    {
+      "test_id": "T_manual_14",
+      "requirement_id": "FR5",
+      "scenario": "Valid Sign-In After Reinstall Loads Same History",
+      "steps": [
+        "Use an account with saved history",
+        "Reinstall the app",
+        "Sign in with valid credentials"
+      ],
+      "expected_result": "The user is authenticated successfully and the previously saved history is loaded."
+    },
+    {
+      "test_id": "T_manual_15",
+      "requirement_id": "FR5",
+      "scenario": "Returning User Sign-In Opens Account History",
+      "steps": [
+        "Log out of an account that has existing saved history",
+        "Return to the sign-in screen",
+        "Sign back in with valid credentials"
+      ],
+      "expected_result": "The returning user is authenticated and their account history becomes available after sign-in."
+    },
+    {
+      "test_id": "T_manual_16",
+      "requirement_id": "FR6",
+      "scenario": "Entries Persist After App Update",
+      "steps": [
+        "Use the app to create and save multiple entries",
+        "Update the application to a newer version",
+        "Open the entries history after the update"
+      ],
+      "expected_result": "All previously saved entries remain accessible after the update."
+    },
+    {
+      "test_id": "T_manual_17",
+      "requirement_id": "FR6",
+      "scenario": "Reports Persist After App Update",
+      "steps": [
+        "Generate at least one report in the current app version",
+        "Update the application",
+        "Navigate to the reports section"
+      ],
+      "expected_result": "Previously generated reports remain accessible after the application update."
+    },
+    {
+      "test_id": "T_manual_18",
+      "requirement_id": "FR6",
+      "scenario": "Updated App Retains Existing User Data on Reopen",
+      "steps": [
+        "Use an account with saved entries and reports",
+        "Update the app and reopen it",
+        "Check both the history and reports sections"
+      ],
+      "expected_result": "The updated app retains access to all previously saved entries and reports."
+    },
+    {
+      "test_id": "T_manual_19",
+      "requirement_id": "FR7",
+      "scenario": "Optional Data Categories Are Disclosed Before Consent",
+      "steps": [
+        "Proceed to a screen requesting account, health, or device-sharing data beyond core check-ins",
+        "Read the information displayed for each requested optional data category",
+        "Observe the consent controls"
+      ],
+      "expected_result": "The system lists each optional data category, explains its purpose, and requests explicit user consent before collection."
+    },
+    {
+      "test_id": "T_manual_20",
+      "requirement_id": "FR7",
+      "scenario": "User Can Decline Optional Data Sharing",
+      "steps": [
+        "Open a data collection screen for optional categories",
+        "Decline consent for at least one optional data category",
+        "Continue using core check-in features"
+      ],
+      "expected_result": "The optional data is not collected and the user can continue using core check-in features."
+    },
+    {
+      "test_id": "T_manual_21",
+      "requirement_id": "FR7",
+      "scenario": "Explicit Consent Required for Device-Sharing Data",
+      "steps": [
+        "Navigate to a screen that requests device-sharing or analytics data",
+        "Review the disclosure shown",
+        "Attempt to proceed without actively granting consent"
+      ],
+      "expected_result": "The system does not treat device-sharing consent as granted unless the user actively provides consent."
+    },
+    {
+      "test_id": "T_manual_22",
+      "requirement_id": "FR8",
+      "scenario": "Account Creation With Valid Required Fields",
+      "steps": [
+        "Open the account creation screen",
+        "Enter valid values in all required fields",
+        "Submit the account creation form"
+      ],
+      "expected_result": "The account is created successfully."
+    },
+    {
+      "test_id": "T_manual_23",
+      "requirement_id": "FR8",
+      "scenario": "Entries Are Linked to Newly Created Account",
+      "steps": [
+        "Create a new account using valid required fields",
+        "Complete and save a new entry after account creation",
+        "Open the account history"
+      ],
+      "expected_result": "The saved entry is stored under the newly created account."
+    },
+    {
+      "test_id": "T_manual_24",
+      "requirement_id": "FR8",
+      "scenario": "Second Entry Is Stored Under Same Account",
+      "steps": [
+        "Create a new account successfully",
+        "Save two separate entries while signed in",
+        "Review the account history"
+      ],
+      "expected_result": "Both entries are linked to the same created account and appear in that account’s history."
+    },
+    {
+      "test_id": "T_manual_25",
+      "requirement_id": "FR9",
+      "scenario": "Restore Synchronized Data After Reinstall on Same Device",
+      "steps": [
+        "Use a signed-in account with previously synchronized entries and reports",
+        "Reinstall the application on the same device",
+        "Sign back in to the same account"
+      ],
+      "expected_result": "The user’s synchronized entries and reports are restored after reinstall."
+    },
+    {
+      "test_id": "T_manual_26",
+      "requirement_id": "FR9",
+      "scenario": "Restore Synchronized Data on New Device",
+      "steps": [
+        "Use an account with previously synchronized data",
+        "Install the app on a second supported device",
+        "Sign in with the same account on the second device"
+      ],
+      "expected_result": "The synchronized entries and reports are restored on the new device."
+    },
+    {
+      "test_id": "T_manual_27",
+      "requirement_id": "FR9",
+      "scenario": "Restored Data Includes Both Entries and Reports",
+      "steps": [
+        "Use an account with synchronized entries and at least one report",
+        "Sign in after reinstall or on another device",
+        "Check both the entries history and reports section"
+      ],
+      "expected_result": "Both synchronized entries and reports are restored successfully."
+    },
+    {
+      "test_id": "T_manual_28",
+      "requirement_id": "FR10",
+      "scenario": "Save Reminder Settings With Frequency and Time Windows",
+      "steps": [
+        "Open reminder settings",
+        "Enable reminders and choose a daily frequency and preferred time windows",
+        "Save the reminder settings"
+      ],
+      "expected_result": "The system stores the selected reminder enablement state, frequency, and preferred time windows."
+    },
+    {
+      "test_id": "T_manual_29",
+      "requirement_id": "FR10",
+      "scenario": "Disable Reminders in Settings",
+      "steps": [
+        "Open reminder settings",
+        "Turn reminder enablement off",
+        "Save the updated settings"
+      ],
+      "expected_result": "The system stores reminders as disabled."
+    },
+    {
+      "test_id": "T_manual_30",
+      "requirement_id": "FR10",
+      "scenario": "Modify Existing Reminder Preferences",
+      "steps": [
+        "Open reminder settings for a user with existing reminder preferences",
+        "Change the daily frequency and time windows",
+        "Save the updated preferences"
+      ],
+      "expected_result": "The system stores the modified frequency and preferred reminder time windows."
+    },
+    {
+      "test_id": "T_manual_31",
+      "requirement_id": "FR11",
+      "scenario": "Reminder Continues After One Missed Check-In",
+      "steps": [
+        "Enable reminders for a user account",
+        "Miss one scheduled check-in without disabling reminders",
+        "Wait for the next scheduled reminder time"
+      ],
+      "expected_result": "The system still issues the next reminder according to the saved schedule."
+    },
+    {
+      "test_id": "T_manual_32",
+      "requirement_id": "FR11",
+      "scenario": "Reminder Continues After Multiple Missed Check-Ins",
+      "steps": [
+        "Enable reminders for a user account",
+        "Miss multiple scheduled check-ins",
+        "Wait for the next scheduled reminder time"
+      ],
+      "expected_result": "The system continues issuing reminders according to the saved schedule until the user disables reminders."
+    },
+    {
+      "test_id": "T_manual_33",
+      "requirement_id": "FR11",
+      "scenario": "No Reminder Issued After User Disables Reminders",
+      "steps": [
+        "Enable reminders for a user account",
+        "Open reminder settings and disable reminders",
+        "Wait for the next previously scheduled reminder time"
+      ],
+      "expected_result": "The system does not issue a reminder after the user has disabled reminders."
+    },
+    {
+      "test_id": "T_manual_34",
+      "requirement_id": "FR12",
+      "scenario": "Employment Context Excludes Inapplicable Work Questions",
+      "steps": [
+        "Open the user context settings",
+        "Declare a context factor indicating the user is not employed",
+        "Generate the next questionnaire"
+      ],
+      "expected_result": "The questionnaire excludes clearly inapplicable work-related questions."
+    },
+    {
+      "test_id": "T_manual_35",
+      "requirement_id": "FR12",
+      "scenario": "Disability Context Excludes Inapplicable Health Assumption Questions",
+      "steps": [
+        "Open the user context settings",
+        "Declare a disability or chronic illness context factor",
+        "Generate the next questionnaire"
+      ],
+      "expected_result": "The questionnaire excludes clearly inapplicable questions that conflict with the declared health context."
+    },
+    {
+      "test_id": "T_manual_36",
+      "requirement_id": "FR12",
+      "scenario": "Atypical Work Schedule Context Affects Questionnaire Relevance",
+      "steps": [
+        "Open the user context settings",
+        "Declare an atypical work schedule",
+        "Generate the next questionnaire"
+      ],
+      "expected_result": "The generated questionnaire excludes clearly inapplicable questions based on the declared atypical work schedule."
+    },
+    {
+      "test_id": "T_manual_37",
+      "requirement_id": "FR13",
+      "scenario": "Same Non-Required Question Not Reused More Than Twice in 7 Days",
+      "steps": [
+        "Use a test account to complete multiple check-ins within a 7-day period",
+        "Track the appearance count of a non-frequent question",
+        "Continue generating questionnaires within the same rolling 7-day period"
+      ],
+      "expected_result": "The same non-frequent question text does not appear more than twice within the rolling 7-day period."
+    },
+    {
+      "test_id": "T_manual_38",
+      "requirement_id": "FR13",
+      "scenario": "Required frequent Question May Exceed Reuse Limit",
+      "steps": [
+        "Use a questionnaire configuration that includes a question explicitly marked as required for frequent assessment",
+        "Complete multiple check-ins within a 7-day period",
+        "Track repeated appearances of the marked question"
+      ],
+      "expected_result": "A question explicitly marked as required for frequent assessment may appear more than twice within the rolling 7-day period."
+    },
+    {
+      "test_id": "T_manual_39",
+      "requirement_id": "FR13",
+      "scenario": "Question Reuse Allowed Again After Rolling 7-Day Window Passes",
+      "steps": [
+        "Use a test account to receive the same non-frequent question twice within 7 days",
+        "Wait until the earlier appearances fall outside the rolling 7-day window",
+        "Generate a new questionnaire"
+      ],
+      "expected_result": "The previously limited non-frequent question may appear again once the rolling 7-day window has passed."
+    },
+    {
+      "test_id": "T_manual_40",
+      "requirement_id": "FR14",
+      "scenario": "Generated Report Shows Pattern Summary and Date Range",
+      "steps": [
+        "Use a user account with enough completed entries for report generation",
+        "Generate a report",
+        "Review the displayed report content"
+      ],
+      "expected_result": "The report displays at least one summary of recent user-entered patterns and the date range covered by the report."
+    },
+    {
+      "test_id": "T_manual_41",
+      "requirement_id": "FR14",
+      "scenario": "Previously Generated Report Remains Viewable",
+      "steps": [
+        "Generate a report for a user account with sufficient entries",
+        "Navigate away from the report screen",
+        "Return to the reports history and reopen the report"
+      ],
+      "expected_result": "The generated report remains viewable and still shows pattern summary information and the covered date range."
+    },
+    {
+      "test_id": "T_manual_42",
+      "requirement_id": "FR14",
+      "scenario": "Report Date Range Matches Input Period",
+      "steps": [
+        "Create enough entries over a known date interval to generate a report",
+        "Generate the report",
+        "Compare the displayed report date range to the known entry interval used"
+      ],
+      "expected_result": "The report identifies the date range covered by the report and that range matches the underlying reporting period."
+    },
+    {
+      "test_id": "T_manual_43",
+      "requirement_id": "FR15",
+      "scenario": "Export Generated Report Successfully",
+      "steps": [
+        "Use an account with an existing generated report",
+        "Open the report",
+        "Select the export action"
+      ],
+      "expected_result": "The system produces an exportable report file."
+    },
+    {
+      "test_id": "T_manual_44",
+      "requirement_id": "FR15",
+      "scenario": "Exported Report Contains Report Content and Date Range",
+      "steps": [
+        "Generate or open an existing report",
+        "Export the report",
+        "Open the exported file"
+      ],
+      "expected_result": "The exported report file contains the report content and the report date range."
+    },
+    {
+      "test_id": "T_manual_45",
+      "requirement_id": "FR15",
+      "scenario": "User Can Export Report Intended for Healthcare Sharing",
+      "steps": [
+        "Use an account with a generated report",
+        "Select the export option from the report screen",
+        "Save the exportable file to the device"
+      ],
+      "expected_result": "The system creates a report file that can be saved and shared with a healthcare professional."
     }
   ]
 }
