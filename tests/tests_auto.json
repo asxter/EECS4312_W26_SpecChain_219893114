@@ -3,333 +3,343 @@
     {
       "test_id": "T_auto_1",
       "requirement_id": "FR_auto_1",
-      "scenario": "User tracks a single emotion",
+      "scenario": "User logs in and tracks daily mood",
       "steps": [
-        "Log in to the system with valid credentials",
-        "Navigate to the emotion tracking section",
-        "Select 'Happy' as the emotion to track"
+        "The user logs in to the system",
+        "The user selects their current mood from the provided options",
+        "The user submits the mood entry"
       ],
-      "expected_result": "The system records 'Happy' with a current timestamp"
+      "expected_result": "The system records the user's mood entry for that day"
     },
     {
       "test_id": "T_auto_2",
       "requirement_id": "FR_auto_1",
-      "scenario": "User tracks multiple emotions sequentially",
+      "scenario": "System records multiple daily mood entries",
       "steps": [
-        "Log in to the system with valid credentials",
-        "Navigate to the emotion tracking section",
-        "Select 'Sad' as the emotion to track",
-        "Select 'Excited' as the next emotion to track"
+        "The user logs in to the system on two consecutive days",
+        "On each day, the user selects their current mood and submits the entry"
       ],
-      "expected_result": "The system records 'Sad' with a timestamp and then records 'Excited' with a later timestamp"
+      "expected_result": "The system records a mood entry for each day separately"
     },
     {
       "test_id": "T_auto_3",
       "requirement_id": "FR_auto_2",
-      "scenario": "User views emotional state after tracking for a week",
+      "scenario": "User can log emotions easily",
       "steps": [
-        "Log in to the system",
-        "Track emotions for 7 consecutive days",
-        "Navigate to the dashboard"
+        "Launch the app",
+        "Navigate to the emotion tracking section",
+        "Select and log a specific emotion (e.g., 'happy')"
       ],
-      "expected_result": "The system displays a summary of the user's emotional state for the past week"
+      "expected_result": "The selected emotion is successfully logged and displayed in the user's emotion history."
     },
     {
       "test_id": "T_auto_4",
       "requirement_id": "FR_auto_2",
-      "scenario": "User views emotional state with no tracked emotions",
+      "scenario": "User views logged emotions",
       "steps": [
-        "Log in to the system",
-        "Ensure no emotions have been tracked",
-        "Navigate to the dashboard"
+        "Launch the app",
+        "Navigate to the emotion tracking section",
+        "View logged emotions history"
       ],
-      "expected_result": "The system does not display a summary of the user's emotional state"
+      "expected_result": "The user's logged emotions history is displayed, showing a list of previously logged emotions."
     },
     {
       "test_id": "T_auto_5",
       "requirement_id": "FR_auto_3",
-      "scenario": "User views monthly patterns and correlations",
+      "scenario": "User views mood history with multiple entries",
       "steps": [
-        "Log in as a user who has tracked emotions for a month",
-        "Navigate to the patterns or insights section",
-        "View the displayed patterns and correlations"
+        "Log in to the system",
+        "Create 5 mood entries with different emotional states over a period of time",
+        "Navigate to the mood history page"
       ],
-      "expected_result": "The system displays correlations between emotions and events for the past month."
+      "expected_result": "The system displays a visual representation of trends in the user's emotional state over time"
     },
     {
       "test_id": "T_auto_6",
       "requirement_id": "FR_auto_3",
-      "scenario": "User checks for correlations with insufficient data",
+      "scenario": "User views mood history with a single entry",
       "steps": [
-        "Log in as a new user",
-        "Track emotions for 1 day",
-        "Navigate to the patterns or insights section"
+        "Log in to the system",
+        "Create 1 mood entry",
+        "Navigate to the mood history page"
       ],
-      "expected_result": "The system does not display correlations between emotions and events due to insufficient data."
+      "expected_result": "The system displays the single mood entry with no trend information"
     },
     {
       "test_id": "T_auto_7",
       "requirement_id": "FR_auto_4",
-      "scenario": "User receives reminder for upcoming tracking goal",
+      "scenario": "User views mental health patterns after logging emotional data",
       "steps": [
-        "Set a tracking goal with a due date for tomorrow",
-        "Wait until the system generates reminders for the current day",
-        "Check the user's notification inbox"
+        "Log in as an existing user",
+        "Navigate to the emotional data logging section",
+        "Log emotional data for at least 3 days"
       ],
-      "expected_result": "The system has sent a reminder notification for the tracking goal due tomorrow"
+      "expected_result": "The user can view patterns in their mental health when accessing their insights page"
     },
     {
       "test_id": "T_auto_8",
       "requirement_id": "FR_auto_4",
-      "scenario": "No reminder sent without a tracking goal",
+      "scenario": "User views mental health patterns with no logged emotional data",
       "steps": [
-        "Ensure no tracking goal is set",
-        "Wait until the system would normally generate reminders",
-        "Check the user's notification inbox"
+        "Log in as an existing user",
+        "Ensure no emotional data has been logged",
+        "Navigate to the insights page"
       ],
-      "expected_result": "No reminder notification is found in the user's inbox"
+      "expected_result": "The user cannot view patterns in their mental health and is prompted to log emotional data"
     },
     {
       "test_id": "T_auto_9",
       "requirement_id": "FR_auto_5",
-      "scenario": "User receives notifications according to preferences",
+      "scenario": "Successful onboarding and easy mood tracking",
       "steps": [
-        "Set user notification preferences to receive notifications for critical events only",
-        "Generate a notification for a non-critical event",
-        "Generate a notification for a critical event"
+        "Launch the app and complete the onboarding process as a new user",
+        "Verify the user is redirected to the main tracking screen",
+        "Attempt to track mood by selecting an option"
       ],
-      "expected_result": "The system sends a notification for the critical event and does not send a notification for the non-critical event"
+      "expected_result": "The system allows the user to easily select and log their mood"
     },
     {
       "test_id": "T_auto_10",
       "requirement_id": "FR_auto_5",
-      "scenario": "User receives no notifications when disabled",
+      "scenario": "Onboarding failure still allows tracking",
       "steps": [
-        "Disable all notifications for the user",
-        "Generate a notification for a critical event",
-        "Generate a notification for a non-critical event"
+        "Launch the app and intentionally disrupt the onboarding process",
+        "Complete the disrupted onboarding",
+        "Attempt to track mood by selecting an option"
       ],
-      "expected_result": "The system does not send any notifications for either the critical or non-critical event"
+      "expected_result": "The system still allows the user to track their mood after a disrupted onboarding"
     },
     {
       "test_id": "T_auto_11",
       "requirement_id": "FR_auto_6",
-      "scenario": "User views reflection after tracking session",
+      "scenario": "Accessing tools during a depressive episode",
       "steps": [
-        "Log in as a user",
-        "Complete a tracking session with sample data",
-        "View the reflection for the completed tracking session"
+        "Log in to the app as a registered user",
+        "Simulate a depressive episode by selecting the 'I'm feeling down' option",
+        "Navigate to the 'Manage Episode' section"
       ],
-      "expected_result": "The system provides a summary for discussion with a therapist"
+      "expected_result": "The user can access a list of tools to help manage their depressive episode"
     },
     {
       "test_id": "T_auto_12",
       "requirement_id": "FR_auto_6",
-      "scenario": "User views reflection without tracking session",
+      "scenario": "Managing episode without logged-in user",
       "steps": [
-        "Log in as a user",
-        "Ensure no tracking sessions have been completed",
-        "Attempt to view reflection"
+        "Ensure the user is logged out of the app",
+        "Attempt to access the 'Manage Episode' section",
+        "Verify the app prompts the user to log in"
       ],
-      "expected_result": "The system does not provide a summary for discussion with a therapist"
+      "expected_result": "The user is redirected to the login page and cannot access the episode management tools without logging in"
     },
     {
       "test_id": "T_auto_13",
       "requirement_id": "FR_auto_7",
-      "scenario": "Change app language to Spanish",
+      "scenario": "User logs a private entry and verifies it's not shared",
       "steps": [
-        "Log in to the app with valid credentials",
-        "Navigate to the language settings menu",
-        "Select Spanish as the preferred language"
+        "Log in as an existing user",
+        "Navigate to the private space for self-expression",
+        "Create a new private entry with some content"
       ],
-      "expected_result": "The app's language is changed to Spanish"
+      "expected_result": "The entry is saved and not visible to anyone else"
     },
     {
       "test_id": "T_auto_14",
       "requirement_id": "FR_auto_7",
-      "scenario": "Change app language to English",
+      "scenario": "Saved private entry remains private",
       "steps": [
-        "Log in to the app with valid credentials",
-        "Navigate to the language settings menu",
-        "Select English as the preferred language"
+        "Log in as an existing user",
+        "Navigate to the private space for self-expression",
+        "Create and save a new private entry",
+        "Log out and log back in as a different user"
       ],
-      "expected_result": "The app's language is changed to English"
+      "expected_result": "The saved private entry is not visible to the new user"
     },
     {
       "test_id": "T_auto_15",
       "requirement_id": "FR_auto_8",
-      "scenario": "Valid educational content from credible source",
+      "scenario": "User selects English as language",
       "steps": [
-        "Log in as a registered user",
-        "Navigate to the educational content section",
-        "Select a content item to view"
+        "Launch the application",
+        "Navigate to the language selection menu",
+        "Select English as the preferred language",
+        "Save the language selection"
       ],
-      "expected_result": "The system displays the content with a clear indication of its credible source."
+      "expected_result": "The application's menu and content are displayed in English."
     },
     {
       "test_id": "T_auto_16",
       "requirement_id": "FR_auto_8",
-      "scenario": "Invalid educational content handling",
+      "scenario": "User selects Spanish as language",
       "steps": [
-        "Simulate educational content from a non-credible source",
-        "Log in as a registered user",
-        "Navigate to the educational content section",
-        "Select the simulated content item to view"
+        "Launch the application",
+        "Navigate to the language selection menu",
+        "Select Spanish as the preferred language",
+        "Save the language selection"
       ],
-      "expected_result": "The system does not display the content or clearly indicates it is from an uncredible source."
+      "expected_result": "The application's menu and content are displayed in Spanish."
     },
     {
       "test_id": "T_auto_17",
       "requirement_id": "FR_auto_9",
-      "scenario": "User leaves a review and is not prompted again within 30 days",
+      "scenario": "User views results without subscription",
       "steps": [
-        "The user leaves a review on the system",
-        "The system records the review date as today",
-        "The system waits for 29 days"
+        "Log in to the system with valid credentials",
+        "Navigate to the results page",
+        "Verify that the user has previously logged data"
       ],
-      "expected_result": "The system does not prompt the user to leave another review"
+      "expected_result": "The user can view their results without any subscription prompts or restrictions"
     },
     {
       "test_id": "T_auto_18",
       "requirement_id": "FR_auto_9",
-      "scenario": "User is prompted for another review after 30 days",
+      "scenario": "User attempts to access results with subscription prompt",
       "steps": [
-        "The user leaves a review on the system",
-        "The system records the review date as today",
-        "The system waits for 30 days"
+        "Log in to the system with valid credentials",
+        "Navigate to a feature that requires a subscription in other parts of the system",
+        "Return to the results page without taking the subscription"
       ],
-      "expected_result": "The system prompts the user to leave another review"
+      "expected_result": "The user can still access and view their results without taking the subscription"
     },
     {
       "test_id": "T_auto_19",
       "requirement_id": "FR_auto_10",
-      "scenario": "User starts tracking session with clear instructions",
+      "scenario": "User receives thought-provoking questions during mental health reflection",
       "steps": [
-        "The user logs into the system and navigates to the tracking interface",
-        "The user initiates a new tracking session",
-        "The user observes the tracking interface for guidance"
+        "Launch the mental health app",
+        "Navigate to the reflection section",
+        "Start the reflection process"
       ],
-      "expected_result": "The system displays clear instructions on how to proceed with the tracking session"
+      "expected_result": "The user is presented with a thought-provoking question related to their mental health."
     },
     {
       "test_id": "T_auto_20",
       "requirement_id": "FR_auto_10",
-      "scenario": "User interacts with tracking interface with minimal distractions",
+      "scenario": "User does not receive questions when not in reflection mode",
       "steps": [
-        "The user is in an active tracking session",
-        "The user interacts with various elements of the tracking interface (e.g., buttons, charts)",
-        "The user assesses the interface for distractions"
+        "Launch the mental health app",
+        "Navigate to a section other than reflection",
+        "Verify the app's content"
       ],
-      "expected_result": "The system maintains a minimalistic interface with no pop-ups, ads, or unnecessary notifications during the tracking session"
+      "expected_result": "The user is not presented with thought-provoking questions related to their mental health."
     },
     {
       "test_id": "T_auto_21",
       "requirement_id": "FR_auto_11",
-      "scenario": "User successfully tracks their mood and thoughts",
+      "scenario": "User logs multiple mood entries and views history to see trends",
       "steps": [
-        "The user logs into the system",
-        "The user starts a new tracking session",
-        "The user enters their current mood as 'happy' and their thoughts as 'I am feeling good today'",
-        "The user saves the tracking entry"
+        "Log in as a registered user",
+        "Navigate to the mood tracking section",
+        "Log a positive mood entry",
+        "Log a negative mood entry on a different day",
+        "View mood history",
+        "Observe the mood trend over time"
       ],
-      "expected_result": "The system records the user's mood as 'happy', their thoughts as 'I am feeling good today', and includes a timestamp for when the entry was saved."
+      "expected_result": "The system displays a visual representation of the user's mood trend over time, showing both positive and negative entries."
     },
     {
       "test_id": "T_auto_22",
       "requirement_id": "FR_auto_11",
-      "scenario": "User tracks with minimal input",
+      "scenario": "User views mood history with multiple entries on the same day",
       "steps": [
-        "The user logs into the system",
-        "The user starts a new tracking session",
-        "The user enters their current mood as 'neutral' with no thoughts",
-        "The user saves the tracking entry"
+        "Log in as a registered user",
+        "Navigate to the mood tracking section",
+        "Log a positive mood entry for Monday",
+        "Log another positive mood entry for Monday",
+        "Log a negative mood entry for Tuesday",
+        "View mood history",
+        "Observe the mood trend over time"
       ],
-      "expected_result": "The system records the user's mood as 'neutral', no thoughts entered, and includes a timestamp for when the entry was saved."
+      "expected_result": "The system displays a visual representation of the user's mood trend over time, accurately reflecting multiple entries for the same day and different days."
     },
     {
       "test_id": "T_auto_23",
       "requirement_id": "FR_auto_12",
-      "scenario": "User completes reflection session and views insights with emotional support suggestions",
+      "scenario": "User views insights to inform therapy discussions",
       "steps": [
-        "Log in as a user",
-        "Complete a reflection session with sample inputs",
-        "View insights from the reflection session"
+        "Log in to the system with a valid user account",
+        "Log data for at least one therapy session",
+        "Navigate to the insights page",
+        "View the insights provided"
       ],
-      "expected_result": "The system provides suggestions for emotional support"
+      "expected_result": "The insights provided can be used to inform therapy discussions."
     },
     {
       "test_id": "T_auto_24",
       "requirement_id": "FR_auto_12",
-      "scenario": "User views insights without completing a reflection session",
+      "scenario": "System provides valuable insights with logged data",
       "steps": [
-        "Log in as a user",
-        "Navigate to insights page without completing a reflection session"
+        "Log in to the system with a valid user account",
+        "Log data for multiple therapy sessions",
+        "Navigate to the insights page",
+        "Review the insights for relevance to therapy discussions"
       ],
-      "expected_result": "The system does not provide suggestions for emotional support"
+      "expected_result": "The system provides valuable insights based on the logged data."
     },
     {
       "test_id": "T_auto_25",
       "requirement_id": "FR_auto_13",
-      "scenario": "User generates and shares a report with a professional",
+      "scenario": "User logs personal data and verifies privacy",
       "steps": [
-        "Log in to the app as a user",
-        "Generate a report within the app",
-        "Share the report with a professional"
+        "Launch the app and navigate to the data logging section",
+        "Log in with a valid user account",
+        "Enter personal data (e.g., health metrics, location)",
+        "Save the logged data"
       ],
-      "expected_result": "The report is successfully exported and shared with the professional"
+      "expected_result": "The logged data is saved and not visible to other users"
     },
     {
       "test_id": "T_auto_26",
       "requirement_id": "FR_auto_13",
-      "scenario": "User attempts to export report without generating it",
+      "scenario": "User checks data privacy settings",
       "steps": [
-        "Log in to the app as a user",
-        "Try to share a non-existent report with a professional"
+        "Open the app and go to settings",
+        "Navigate to the privacy or data settings section",
+        "Verify that data privacy options are available and enabled by default"
       ],
-      "expected_result": "The system prevents sharing and prompts the user to generate a report first"
+      "expected_result": "The app confirms that user data is set to private by default"
     },
     {
       "test_id": "T_auto_27",
       "requirement_id": "FR_auto_14",
-      "scenario": "Access to basic insights with free account",
+      "scenario": "User can identify patterns after logging emotional data",
       "steps": [
-        "Create a new user account with free subscription plan",
-        "Log in to the system with the free account credentials",
-        "Navigate to the user's results page"
+        "Log in as an existing user",
+        "Navigate to the emotional data logging section",
+        "Log emotional data for at least 5 days with varying feelings and behaviors"
       ],
-      "expected_result": "The system displays basic insights without prompting for subscription upgrade"
+      "expected_result": "The user can view insights and see identifiable patterns in their behavior and feelings."
     },
     {
       "test_id": "T_auto_28",
       "requirement_id": "FR_auto_14",
-      "scenario": "No access restriction to basic results for free users",
+      "scenario": "User views insights without logging emotional data",
       "steps": [
-        "Log in to the system with an existing free account",
-        "Navigate to the results section",
-        "Verify that all basic insights are accessible"
+        "Log in as an existing user",
+        "Navigate to the insights section without logging any emotional data"
       ],
-      "expected_result": "The system does not restrict access to basic insights and does not require payment for viewing them"
+      "expected_result": "The user cannot view insights or see patterns in their behavior and feelings."
     },
     {
       "test_id": "T_auto_29",
       "requirement_id": "FR_auto_15",
-      "scenario": "Valid user expressing emotions",
+      "scenario": "User can log emotions and view history",
       "steps": [
-        "Log in to the system with valid credentials",
-        "Navigate to the emotions expression feature",
-        "Enter and submit emotional content"
+        "Launch the app and navigate to the emotion tracking section",
+        "Log a new emotion with a description and timestamp",
+        "Navigate to the history section and verify the logged emotion is displayed"
       ],
-      "expected_result": "The emotional content is encrypted and not shared with third parties"
+      "expected_result": "The logged emotion is displayed in the history section with its description and timestamp."
     },
     {
       "test_id": "T_auto_30",
       "requirement_id": "FR_auto_15",
-      "scenario": "Logged-in user attempting to access another user's emotional content",
+      "scenario": "User can view logged emotions",
       "steps": [
-        "Log in to the system with valid credentials of another user",
-        "Attempt to access or view the first user's emotional content"
+        "Launch the app and navigate to the emotion tracking section",
+        "Log three new emotions with different descriptions and timestamps",
+        "Navigate to the history section and verify all logged emotions are displayed in chronological order"
       ],
-      "expected_result": "The system prevents access to the first user's emotional content, ensuring it remains private"
+      "expected_result": "All logged emotions are displayed in the history section in chronological order with their descriptions and timestamps."
     }
   ]
 }
