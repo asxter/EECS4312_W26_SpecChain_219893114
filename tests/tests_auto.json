@@ -3,13 +3,333 @@
     {
       "test_id": "T_auto_1",
       "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "scenario": "User tracks a single emotion",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Log in to the system with valid credentials",
+        "Navigate to the emotion tracking section",
+        "Select 'Happy' as the emotion to track"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The system records 'Happy' with a current timestamp"
+    },
+    {
+      "test_id": "T_auto_2",
+      "requirement_id": "FR_auto_1",
+      "scenario": "User tracks multiple emotions sequentially",
+      "steps": [
+        "Log in to the system with valid credentials",
+        "Navigate to the emotion tracking section",
+        "Select 'Sad' as the emotion to track",
+        "Select 'Excited' as the next emotion to track"
+      ],
+      "expected_result": "The system records 'Sad' with a timestamp and then records 'Excited' with a later timestamp"
+    },
+    {
+      "test_id": "T_auto_3",
+      "requirement_id": "FR_auto_2",
+      "scenario": "User views emotional state after tracking for a week",
+      "steps": [
+        "Log in to the system",
+        "Track emotions for 7 consecutive days",
+        "Navigate to the dashboard"
+      ],
+      "expected_result": "The system displays a summary of the user's emotional state for the past week"
+    },
+    {
+      "test_id": "T_auto_4",
+      "requirement_id": "FR_auto_2",
+      "scenario": "User views emotional state with no tracked emotions",
+      "steps": [
+        "Log in to the system",
+        "Ensure no emotions have been tracked",
+        "Navigate to the dashboard"
+      ],
+      "expected_result": "The system does not display a summary of the user's emotional state"
+    },
+    {
+      "test_id": "T_auto_5",
+      "requirement_id": "FR_auto_3",
+      "scenario": "User views monthly patterns and correlations",
+      "steps": [
+        "Log in as a user who has tracked emotions for a month",
+        "Navigate to the patterns or insights section",
+        "View the displayed patterns and correlations"
+      ],
+      "expected_result": "The system displays correlations between emotions and events for the past month."
+    },
+    {
+      "test_id": "T_auto_6",
+      "requirement_id": "FR_auto_3",
+      "scenario": "User checks for correlations with insufficient data",
+      "steps": [
+        "Log in as a new user",
+        "Track emotions for 1 day",
+        "Navigate to the patterns or insights section"
+      ],
+      "expected_result": "The system does not display correlations between emotions and events due to insufficient data."
+    },
+    {
+      "test_id": "T_auto_7",
+      "requirement_id": "FR_auto_4",
+      "scenario": "User receives reminder for upcoming tracking goal",
+      "steps": [
+        "Set a tracking goal with a due date for tomorrow",
+        "Wait until the system generates reminders for the current day",
+        "Check the user's notification inbox"
+      ],
+      "expected_result": "The system has sent a reminder notification for the tracking goal due tomorrow"
+    },
+    {
+      "test_id": "T_auto_8",
+      "requirement_id": "FR_auto_4",
+      "scenario": "No reminder sent without a tracking goal",
+      "steps": [
+        "Ensure no tracking goal is set",
+        "Wait until the system would normally generate reminders",
+        "Check the user's notification inbox"
+      ],
+      "expected_result": "No reminder notification is found in the user's inbox"
+    },
+    {
+      "test_id": "T_auto_9",
+      "requirement_id": "FR_auto_5",
+      "scenario": "User receives notifications according to preferences",
+      "steps": [
+        "Set user notification preferences to receive notifications for critical events only",
+        "Generate a notification for a non-critical event",
+        "Generate a notification for a critical event"
+      ],
+      "expected_result": "The system sends a notification for the critical event and does not send a notification for the non-critical event"
+    },
+    {
+      "test_id": "T_auto_10",
+      "requirement_id": "FR_auto_5",
+      "scenario": "User receives no notifications when disabled",
+      "steps": [
+        "Disable all notifications for the user",
+        "Generate a notification for a critical event",
+        "Generate a notification for a non-critical event"
+      ],
+      "expected_result": "The system does not send any notifications for either the critical or non-critical event"
+    },
+    {
+      "test_id": "T_auto_11",
+      "requirement_id": "FR_auto_6",
+      "scenario": "User views reflection after tracking session",
+      "steps": [
+        "Log in as a user",
+        "Complete a tracking session with sample data",
+        "View the reflection for the completed tracking session"
+      ],
+      "expected_result": "The system provides a summary for discussion with a therapist"
+    },
+    {
+      "test_id": "T_auto_12",
+      "requirement_id": "FR_auto_6",
+      "scenario": "User views reflection without tracking session",
+      "steps": [
+        "Log in as a user",
+        "Ensure no tracking sessions have been completed",
+        "Attempt to view reflection"
+      ],
+      "expected_result": "The system does not provide a summary for discussion with a therapist"
+    },
+    {
+      "test_id": "T_auto_13",
+      "requirement_id": "FR_auto_7",
+      "scenario": "Change app language to Spanish",
+      "steps": [
+        "Log in to the app with valid credentials",
+        "Navigate to the language settings menu",
+        "Select Spanish as the preferred language"
+      ],
+      "expected_result": "The app's language is changed to Spanish"
+    },
+    {
+      "test_id": "T_auto_14",
+      "requirement_id": "FR_auto_7",
+      "scenario": "Change app language to English",
+      "steps": [
+        "Log in to the app with valid credentials",
+        "Navigate to the language settings menu",
+        "Select English as the preferred language"
+      ],
+      "expected_result": "The app's language is changed to English"
+    },
+    {
+      "test_id": "T_auto_15",
+      "requirement_id": "FR_auto_8",
+      "scenario": "Valid educational content from credible source",
+      "steps": [
+        "Log in as a registered user",
+        "Navigate to the educational content section",
+        "Select a content item to view"
+      ],
+      "expected_result": "The system displays the content with a clear indication of its credible source."
+    },
+    {
+      "test_id": "T_auto_16",
+      "requirement_id": "FR_auto_8",
+      "scenario": "Invalid educational content handling",
+      "steps": [
+        "Simulate educational content from a non-credible source",
+        "Log in as a registered user",
+        "Navigate to the educational content section",
+        "Select the simulated content item to view"
+      ],
+      "expected_result": "The system does not display the content or clearly indicates it is from an uncredible source."
+    },
+    {
+      "test_id": "T_auto_17",
+      "requirement_id": "FR_auto_9",
+      "scenario": "User leaves a review and is not prompted again within 30 days",
+      "steps": [
+        "The user leaves a review on the system",
+        "The system records the review date as today",
+        "The system waits for 29 days"
+      ],
+      "expected_result": "The system does not prompt the user to leave another review"
+    },
+    {
+      "test_id": "T_auto_18",
+      "requirement_id": "FR_auto_9",
+      "scenario": "User is prompted for another review after 30 days",
+      "steps": [
+        "The user leaves a review on the system",
+        "The system records the review date as today",
+        "The system waits for 30 days"
+      ],
+      "expected_result": "The system prompts the user to leave another review"
+    },
+    {
+      "test_id": "T_auto_19",
+      "requirement_id": "FR_auto_10",
+      "scenario": "User starts tracking session with clear instructions",
+      "steps": [
+        "The user logs into the system and navigates to the tracking interface",
+        "The user initiates a new tracking session",
+        "The user observes the tracking interface for guidance"
+      ],
+      "expected_result": "The system displays clear instructions on how to proceed with the tracking session"
+    },
+    {
+      "test_id": "T_auto_20",
+      "requirement_id": "FR_auto_10",
+      "scenario": "User interacts with tracking interface with minimal distractions",
+      "steps": [
+        "The user is in an active tracking session",
+        "The user interacts with various elements of the tracking interface (e.g., buttons, charts)",
+        "The user assesses the interface for distractions"
+      ],
+      "expected_result": "The system maintains a minimalistic interface with no pop-ups, ads, or unnecessary notifications during the tracking session"
+    },
+    {
+      "test_id": "T_auto_21",
+      "requirement_id": "FR_auto_11",
+      "scenario": "User successfully tracks their mood and thoughts",
+      "steps": [
+        "The user logs into the system",
+        "The user starts a new tracking session",
+        "The user enters their current mood as 'happy' and their thoughts as 'I am feeling good today'",
+        "The user saves the tracking entry"
+      ],
+      "expected_result": "The system records the user's mood as 'happy', their thoughts as 'I am feeling good today', and includes a timestamp for when the entry was saved."
+    },
+    {
+      "test_id": "T_auto_22",
+      "requirement_id": "FR_auto_11",
+      "scenario": "User tracks with minimal input",
+      "steps": [
+        "The user logs into the system",
+        "The user starts a new tracking session",
+        "The user enters their current mood as 'neutral' with no thoughts",
+        "The user saves the tracking entry"
+      ],
+      "expected_result": "The system records the user's mood as 'neutral', no thoughts entered, and includes a timestamp for when the entry was saved."
+    },
+    {
+      "test_id": "T_auto_23",
+      "requirement_id": "FR_auto_12",
+      "scenario": "User completes reflection session and views insights with emotional support suggestions",
+      "steps": [
+        "Log in as a user",
+        "Complete a reflection session with sample inputs",
+        "View insights from the reflection session"
+      ],
+      "expected_result": "The system provides suggestions for emotional support"
+    },
+    {
+      "test_id": "T_auto_24",
+      "requirement_id": "FR_auto_12",
+      "scenario": "User views insights without completing a reflection session",
+      "steps": [
+        "Log in as a user",
+        "Navigate to insights page without completing a reflection session"
+      ],
+      "expected_result": "The system does not provide suggestions for emotional support"
+    },
+    {
+      "test_id": "T_auto_25",
+      "requirement_id": "FR_auto_13",
+      "scenario": "User generates and shares a report with a professional",
+      "steps": [
+        "Log in to the app as a user",
+        "Generate a report within the app",
+        "Share the report with a professional"
+      ],
+      "expected_result": "The report is successfully exported and shared with the professional"
+    },
+    {
+      "test_id": "T_auto_26",
+      "requirement_id": "FR_auto_13",
+      "scenario": "User attempts to export report without generating it",
+      "steps": [
+        "Log in to the app as a user",
+        "Try to share a non-existent report with a professional"
+      ],
+      "expected_result": "The system prevents sharing and prompts the user to generate a report first"
+    },
+    {
+      "test_id": "T_auto_27",
+      "requirement_id": "FR_auto_14",
+      "scenario": "Access to basic insights with free account",
+      "steps": [
+        "Create a new user account with free subscription plan",
+        "Log in to the system with the free account credentials",
+        "Navigate to the user's results page"
+      ],
+      "expected_result": "The system displays basic insights without prompting for subscription upgrade"
+    },
+    {
+      "test_id": "T_auto_28",
+      "requirement_id": "FR_auto_14",
+      "scenario": "No access restriction to basic results for free users",
+      "steps": [
+        "Log in to the system with an existing free account",
+        "Navigate to the results section",
+        "Verify that all basic insights are accessible"
+      ],
+      "expected_result": "The system does not restrict access to basic insights and does not require payment for viewing them"
+    },
+    {
+      "test_id": "T_auto_29",
+      "requirement_id": "FR_auto_15",
+      "scenario": "Valid user expressing emotions",
+      "steps": [
+        "Log in to the system with valid credentials",
+        "Navigate to the emotions expression feature",
+        "Enter and submit emotional content"
+      ],
+      "expected_result": "The emotional content is encrypted and not shared with third parties"
+    },
+    {
+      "test_id": "T_auto_30",
+      "requirement_id": "FR_auto_15",
+      "scenario": "Logged-in user attempting to access another user's emotional content",
+      "steps": [
+        "Log in to the system with valid credentials of another user",
+        "Attempt to access or view the first user's emotional content"
+      ],
+      "expected_result": "The system prevents access to the first user's emotional content, ensuring it remains private"
     }
   ]
 }
