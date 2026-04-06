@@ -1,12 +1,12 @@
 {
   "pipeline": "auto",
   "dataset_size": 2582,
-  "persona_count": 6,
+  "persona_count": 5,
   "requirements_count": 15,
   "tests_count": 30,
-  "traceability_links": 66,
+  "traceability_links": 65,
   "review_coverage_ratio": 1.0,
   "traceability_ratio": 1.0,
   "testability_rate": 1.0,
-  "ambiguity_ratio": 0.2667
+  "ambiguity_ratio": 0.2
 }
