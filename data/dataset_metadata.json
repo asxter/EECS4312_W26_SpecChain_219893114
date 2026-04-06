@@ -1,0 +1,22 @@
+{
+  "app_name": "MindDoc: Mental Health Support",
+  "app_id": "de.moodpath.android",
+  "app_url": "https://play.google.com/store/apps/details?id=de.moodpath.android&hl=en_CA",
+  "store": "Google Play Store",
+  "collection_method": "Python google-play-scraper library",
+  "collection_country": "ca",
+  "collection_language": "en",
+  "sort_order": "NEWEST",
+  "requested_review_count": 3000,
+  "extracted_review_count": 3000,
+  "google_play_reported_review_count": 587,
+  "google_play_reported_rating_count": 40050,
+  "google_play_score": 4.1134753,
+  "notes": [
+    "Google Play may not expose every historical review through scraping APIs.",
+    "If fewer than the requested number of reviews are returned, this may reflect store-side limits or app-side availability.",
+    "Raw data is saved in data/reviews_raw.jsonl.",
+    "Cleaning decisions will be completed by src/02_clean.py and can later update this metadata file if desired."
+  ],
+  "cleaning_decisions": []
+}
