@@ -2,11 +2,207 @@
   "groups": [
     {
       "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
+      "theme": "Budget‑constrained users frustrated by paywalls and high subscription costs",
+      "review_ids": [
+        "4cf4ff8a-3aec-4219-ba79-5cc645cc1b15",
+        "a360c212-f023-438c-991b-a3f28f3dd7ba",
+        "b7e23fb5-2b6e-4cf8-bd4c-0ec67b273a1a",
+        "81c6e690-0ce4-4d0f-acf6-e2678939e1aa",
+        "c086cabd-06df-428e-bbba-864e4bd0778c",
+        "3d61709a-0872-45b0-a4d8-27d8db423c5a",
+        "39ef38ce-b7ed-4ad1-b391-98344d8e366d",
+        "affef279-7511-46e8-b4e4-8f9cc6da0a2b",
+        "f1c683f8-e041-444a-a0de-03c9c64e352f",
+        "f7f92b4a-fa1c-406e-a550-7ffad9f8b678",
+        "fad46f60-a4fe-45ed-8e73-515e505a9cf5",
+        "c048ffab-74fe-483c-8542-45a4fae1f743",
+        "2e69a0d8-f877-4ae3-b33d-60aa01f8ac85"
+      ],
       "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
+        "Everything but the introduction is paywalled. I do not need an app to notice what affects mood. Downloaded for the mental health resources, but will use something that offers a chance to text the benefits before charging.",
+        "Puts results behind a paywall after using for 14 days, thus making it useless",
+        "What a useless app, answered questions for 14 days to get a 'report' which told me my mental health was poor, well duhhh, that's why I was using the app, questions about Covid which was 5 years ago and are not relevant, and wanting to charge extortionate amounts.",
+        "ok so what's hard is knowing I'm not ok, no fault of mine, and the price of healing is far more than I can afford expecially as I lost my job (again) due to the trauma inflicted upon me as a child I need to over come this but the tools and resources are only available if I'm a productive member of society and I cant learn and heal and work. If only I could qualify for some kind of special service or a discount. Thank you for what I can use. I appreciate your app and the efforts it took to launch",
+        "They charged me for 50 minutes when I had consultation 25 minutes. i visited the psychologist and explained my situation, and she said she couldn't help and I had to pay 153 euro for that, -5*",
+        "I loved using this app every day for over a year. It was very helpful. Then I accidentally subscribed to the app, immediately cancelled it and requested a refund, which was refused. It's pretty disappointing, the app really helped but their lack of caring about the users of their app is gross so I quit using it.",
+        "Listen, if 90 percent of the app is unusable without purchasing a subscription just make the app paid instead. Otherwise, it just feels exploitative.",
+        "This application offers a wide range of beneficial topics and articles, as well as mental & emotional support skills.《essential for personal growth/self-awareness.》Though,, it would be greatly appreciated if some of the features were made available, esp w/o requiring a subscription. This would ensure that individuals who are struggling w/structural mindset, goals, mental health, & individuals could truly benefit from the app's resources aren't discriminated against & excluded",
+        "Complete waste of time. You will not have anything useful after your subscription starts.",
+        "Favorite app, I just wish I can get a free premium subscription for a reason.",
+        "The concept is great and I would love to have access to the content but it seems like after logging your questions and answers for a while theres nothing else im able to do without paying for it. Im all for support and donations but I think the cost is too much honestly.",
+        "Not a free App. Requires subscription after 1 week trial. $35.00 for the rest of year and then $69.99 for full year.",
+        "It used to be better but a lot of features got locked behind a paywall"
+      ]
+    },
+    {
+      "group_id": "G2",
+      "theme": "Users experiencing crashes, bugs, and connection errors",
+      "review_ids": [
+        "abe48d35-6cad-40f8-b5d9-a176ee371a4e",
+        "d66b13fb-dbd2-46e3-b70d-823311ff5a97",
+        "b0585e2b-d036-484b-a416-42d89d21e654",
+        "a585b5de-6b4a-4979-86f3-8238534857b9",
+        "008e22c8-46db-499e-8512-172b8fd6deac",
+        "39b7681d-28ed-4209-9b6d-f50668ded696",
+        "4a9b3a17-d2ae-4252-b2f9-91e05373a33c",
+        "1203993a-3f40-4a51-bba5-ea661049b9c3",
+        "6d93d49e-f641-4739-99fb-b1c1073318cd",
+        "a4262406-d7bd-46ea-84f2-caf84b308ff5",
+        "231e7e26-fc70-4c19-8054-2489fec6cda4",
+        "2252cfeb-b3c2-4d76-ad46-1369720d4389",
+        "d8a6ff9a-0c1e-4fb1-9dc2-a8fb0be9a822"
+      ],
+      "example_reviews": [
+        "Great app, BUT there is currently an error when you try to sign up to premium membership. It's impossible to upgrade at the moment, so I cannot use any premium features. I've sent an email about this, and I was told that there is a known issue and it would be resolved soon. However, it's still not resolved and I still cannot upgrade. Resolve the issue and I will change my rating. Thanks 😊",
+        "Sometimes the app glitches but I have been using for 3 years and I always recommend. It is very handy in keeping track when you cannot tell if you are in hard place.",
+        "Won't let me log in, says internet connection lost, but all my other wifi dependent apps are fine.",
+        "In general, I love this app. It's helped me to track patterns in my mood and I can look back on how I was feeling and perhaps why. I downloaded the update to fix the bug recently. It worked for a couple of days but now it's not working again. The app opens but no content is present. Very frustrating",
+        "The app isn't offering questions to answer, it's just a blank screen Update: the new update has worked! Thank you",
+        "UPDATE*Seems to work again with update. Paid subscriber for almost a year. Amazing for awhile. Audio insights stopped working. Contacted customer service. Absolutely no help. Now I cannot do anything on the app. Completely blank. Shows me it's time to answer questions. Hit notification and it's blank. Deleted app and redownload. Now I cannot sign in bc it says I have no internet connection. I'm connected to the internet. Will be deleting and unsubscribing soon. Sad. I truly enjoyed this app.",
+        "To answer the developer on my previous review, I already have the update installed. Now your app isn't connecting to any Wi-Fi or data. All of my other apps are connected to the internet perfectly, just not MindDoc. I uninstalled and reinstalled the app just to be sure, and now I can't log in because there's \"no internet connection.\" Looks like another bug fix is necessary.",
+        "Won't let me log-in as it is saying there is no Internet connection, despite my wi-fi switched on and have also tried it on mobile data",
+        "Update* this is my 2nd update and had to delete my previous post to write this one. It no longer works. It gives me a notification and when I open it to put in my answers there are no questions, just a black screen. No matter which tab it is all black. I can't even go to my calendar for previous days. I've looked at updates and reinstalling and nothing works. Really a shame as I have been using this app for years 😔",
+        "Twas good till it just randomly stopped working w no collection of what ive written",
+        "Love this app, recommended it to so many people, however in the last two days I don't get any questions, just a blank screen so I can no longer use it. Changed back to 5 star as this app is excellent, and was fixed very fast.",
+        "is it just me that has an error in the app?? the app is empty and i can't log in because it says connection error although my wifi signal is good.",
+        "Recently, the app just straight out stopped working. So I've missed 3 days of questions. But thankfully an update came quick, thanks for the quick response, Devs. Other than that odd bug, the app is amazing and really lets me know what's bringing me down and how to improve."
+      ]
+    },
+    {
+      "group_id": "G3",
+      "theme": "Privacy and data‑sharing concerns (mandatory accounts, tracking, loss of data)",
+      "review_ids": [
+        "b69f4ef9-7d53-4e38-817e-9e506d787b03",
+        "8d328b9d-9b41-4bfc-a52f-24f5ac10f6b1",
+        "a01eb69d-877f-4ec3-8ada-e94608e0f2fd",
+        "fbdbce6a-fe56-4273-a957-af833fce24a7",
+        "d13b100a-d4f2-4ae7-9ca6-4a2013cd817e",
+        "eb334c9d-9486-443b-a05e-a32a25d0acdc",
+        "7725c06f-d31f-476d-a40a-afcb9f8dd42b",
+        "0f7939ee-4dbc-4869-a5e1-ef432e2d5e8c",
+        "c6477fab-eed5-4fcd-a0eb-0421678b829b",
+        "adb16f3c-49f6-4eef-8834-1ebfe8841c3f",
+        "744bfb68-393d-4e8b-9d4b-f61a08e26fbf",
+        "04c09e56-8e1b-40fd-9e67-d0cf0490b17d",
+        "1e0d7211-0786-46dc-a2bd-5a2f0f991679"
+      ],
+      "example_reviews": [
+        "It's a really great app, unfortunately it shares device IDs with third parties (according to Play) which is not optional and does not work offline. I like the idea but tracking is an absolute no go with apps that handle data this sensitive.",
+        "Right away requires a user account be created and the mandatory terms include you have to agree to the sharing of your personal and health information. NOT FOR ME!",
+        "Free trial only... They ask for way too much personal information only to tell you to pay. Very deceiving..",
+        "Stuck in setup because it is not possible to use anonymously as advertised on the website. In step 3 I have to log in or create an account. No option to skip.",
+        "Just be honest about your pricing up front. Don't ask me a serious of personal questions, give me no opportunity to evaluate/trial the app, then drop an expensive subscription wall. Give me at least a tiny indication of value before asking for money.",
+        "These days the app often logs me out and disables the app lock. I don't get it, can you do something about this quickly? I would like to keep my data safe and I'm beginning to lose trust in this app.",
+        "The app is really design, content is insightful and helpful. But overal experience is demaged by not registering questional logs which must be reinput which ich frustradind listing data constantly on my Google pixel 3 Android 12 on other devices this issue may not exist.",
+        "Used to be good. Now you cant access your own past data. Great. 3 years down the drain. Loads of medical a great life events lost. Great. Old school planner still the best thing.",
+        "I was using this app since early 2019 when it was Moodpath & had a lifetime subscription but now it's all disappeared. I can't even access any of my old data it recorded to share with my therapist. This used to be the best mental health app available. I am honestly so crushed I can't use it anymore. And at a time like this, like people aren't struggling enough.",
+        "Good app but will not let me type in password to create an account, quite pointless..",
+        "Love this app except for one thing... Whenever I try to create an account, it doesn't let me create/type a password hence making me unable to make an account. I had to factory reset my tablet so I wanted to save my journal entries, alas I couldn't without an account. Pretty sad about that, but this app is really good for reminding yourself you have feelings. Sometimes life gets too busy that you forget about your emotions. Helped me cope while I found the right therapist for me.",
+        "super helpful but it doesnt let u have an account so if you delete the app your progress is gone:(",
+        "Great concept, and very helpful! I had to uninstall the app for a brief period to free up space on my phone. I exported the data, as that feature was available. When I reinstalled the app and skimmed through the introduction/first assessment, I discovered that I could not important my exported profile data back to my account. This made me lose a LOT of progress. Personally, I believe you should not add the ability to export data if it cannot be loaded from the cloud, its a shame. Needs work."
+      ]
+    },
+    {
+      "group_id": "G4",
+      "theme": "Notification issues – too many reminders or missing reminders altogether",
+      "review_ids": [
+        "4d818c25-71e6-49f1-8a43-1c7cfd90e226",
+        "db7ae432-6ed4-4245-8d79-098f4b49f2a4",
+        "9f647e59-599a-4a00-a893-7a037aaea27b",
+        "5eb82c4a-34d9-4ee6-bb48-2bc98f5dcc20",
+        "f76b46c8-8a45-4ae2-b487-159f1ba986c1",
+        "3ea0b7a3-7e96-4f95-8d39-bb77ffaf10b3",
+        "0546ea68-4b3b-4791-8a88-e09ed9c9fd35",
+        "6ef3608d-21d9-4023-9a68-ece16a6da572",
+        "95fe0295-c662-444c-912f-4385d1f9b459",
+        "1bcdc380-96f4-48e4-b36d-9b870ad9b264",
+        "c1b895f5-3b08-4d86-8286-bc565bf6160c",
+        "0290564f-afe1-49df-b12d-d03504a9cfcb",
+        "9f39ad00-1dae-4860-82bc-dc6a3c4f446d"
+      ],
+      "example_reviews": [
+        "not getting notifications to answer the questions",
+        "I didn't expect this app to be as good as it is. It's helped me navigate through the aftermath of my panic disorder and gave me helpful tools for the future. The questions being asked 3 times a day can be overwhelming at times, but what I've found is that if you're busy or need to take a break from it, the app recognizes that and stops sending notifications after being ignored for a few days. I ended up buying the annual subscription and have recommended it to many of my friends and loved ones!",
+        "I've been trying to keep a journal for years and I'm just terrible at it. I've been using this app for about 5 weeks and this is the first time I've successfully kept up with something like this! It's been very helpful to track my mood and I like that I can go back and read my entries. I do wish the \"emotions\" board had some more options to choose from but it's not bad. The push notifications 3 times a day is very helpful, I usually get at least one entry in per day because of the reminders.",
+        "Only been using a few days. So far so good. I hate the reminders come at odd times and I miss them.",
+        "My only critique is that it's a lot of notifications, other than that it's great!",
+        "I like everything so far except the notifications. I feel like they're very easy to miss.",
+        "Reminders not working again. Checked settings in app checked app and notification settings in phone and allowed to run in backgroud. Still no reminders. Keep missing questionnaires sometimes for days. Did work for a while. But not anymore again. This keeps being an issue it returns over and over. Starts to get annoying.",
+        "Update: I've now been using the app for a few years. The reporting and tracking help me see where I've been having the worst or best weeks, and I can look back and see what highlights those were and possibly what I still have to work on I usually don't like intrusive notifications and end up ignoring them. But for this app I actually wish the notifications were more intrusive at reminding me to answer the questions.",
+        "i've been using this app for almost a year now and it's been really helpful but for the last two days it just doesn't work, a notification saying \"no network connection\" shows up and that's it, tho my net connection's working just fine",
+        "Really great app for keeping on top of your mental health. I have been using the free version for 6 months now and I find it really useful. Only thing that would be beneficial is for the notifications to be constant and not stop when you miss a few entries as I tend to forget its there in my worst times unless reminded.",
+        "I apologize for having to drop this with one star, but my reminders doesn't seem to fully work. I barely get one a day, so it's really difficult answering enough questions for an evaluation. Currently I do not know if this issue is just with the app on my phone or if it's a general issue, but all in all I hope it gets fixed",
+        "I loved it. Until it started to no longer give me notification. And if i go in manualyy, there are no questions. The page comes up blank.",
+        "Notification stopped working. Tried everything and reached out to support as well. This is causing more anxiety than help."
+      ]
+    },
+    {
+      "group_id": "G5",
+      "theme": "Overwhelming or irrelevant questionnaires and repetitive questions",
+      "review_ids": [
+        "e45752e5-ba84-41b6-be18-d6a920a2f523",
+        "74cf37a5-1864-4d8f-bbd2-befe6d3f428d",
+        "90970984-6996-464e-a369-75b868574eeb",
+        "75bf3047-c5e8-4c3f-a0cf-8f1453ae9e09",
+        "967136a2-4e76-484b-99d1-6717ce5f89d9",
+        "99662db6-51dd-416c-80c3-1150cb7c75d1",
+        "007bd2be-2826-4067-860b-c5654fe75c1a",
+        "1bd43c7c-4f5e-41c4-bb2c-4b8c268913ae",
+        "d7d8d31e-ab92-4c59-96b4-75e5c76c0579",
+        "8a4f00c5-1f58-4bee-a59f-9f99821c47cb",
+        "bbe680a1-bdde-4a3f-9908-db49aa9365c7",
+        "ef1ea885-2462-4a65-bcd2-7d78bf4a9271",
+        "3ac489ca-d7cc-4e9d-91ee-755bab9e788e"
+      ],
+      "example_reviews": [
+        "I had a very disappointing experience. As a mood tracker, it is too basic compared with a multitude of other apps. It's USP? It asks you questions 3 times a day for 2 weeks, at the end, you are told you need to consult a therapist. Which surprise, surprise, Minddoc can recommend one at $65 per week. It is utterly useless for me being unable to afford this and also in the UK. An app designed to exploit people's mental health fears for money",
+        "5/5 would recommend! sometimes the questions don't fit to the \"does it bother you?\" follow up, but it makes up for it",
+        "Questions are repetitive after a while. Reports are not valuable. Feedback feature doesn't seem to work properly",
+        "Its an ad for betterhelp, which is a horrible company. Its initial insights are only helpful to those who have never had therapy or a diagnosis, which is fine because its just initial insights but I doubt it will have anything actually insightful at 14 days. I also wish I could set the day to start at a different time as I sleep night shift hours EDIT: I was able to find where to adjust when it asks the questions. The insights after my 2 weeks were not insightful to me",
+        "While questions can be repetitive and free version provides limited options, I do find it helpful for trends. However, it would be useful to be able to download the weekly records.",
+        "Some questions seem not to take a status quo into account: have you reached goals? When I do not even have goals. Edit Four stars removed because you keep nagging me to rate the app ON A DAY I TOLD YOU I WAS FEELING BAD Get off my back! Edit. I've come off my sad rage. And think 4 stars is fair, even tho the Dev's answer does not make sense Edit: Back to 2 stars for asking me again to rate. Again on a \"very bad\" day.",
+        "After all the questions you answer that they would probably have to pay a lot of money for research for that. You answer a lot of questions only to you know, changing and they have sub plans like 90 a year. IMHO I don't know if I would do it but it does seem like a good app and scientific, maybe I'm just looking into too much. I think I'll read the bible more.",
+        "Your app does not take disabled people into account and they disproportionately suffer from mental illness. Many questions are geared towards work, which I am unable to do. I've also been asked if I'm afraid of becoming seriously ill. I'm already seriously ill. You assume that everyone using this app is physically well and able to work. It is erasure of disabled people. Please consider consulting with people from the disabled community on how to include us.",
+        "I highly recommend this app. If you want an app that you can log in constitenly to check your mental well-being at not cost, this is perfect for you. It asks relevant questions based on what you've answered. What's got me annoyed, though, is that the insights aren't free. How am I supposed to get better if I can't read the insight? These app creators keep forgetting that some of us are in college or are underage and don't have the financials to pay. But overall, it's a good app.",
+        "Hi, too much text and sentences. Just imagine that I'm not a very patient user so basically I can't read all those sentences to help me. I got really bored I didn't engage me. I would prefer a better UI for users who are bored and stressed. You can personalize and classify based on their need and their problems. If someone is a stressed right now that person cannot answer a lot of questions.",
+        "I've been using this app for a couple months now. The questions are starting to get mildly repetitive, but at the moment while I'm making medication changes, this has been helpful to keep an eye on my emotional state throughout the process. I really enjoy getting new questions to answer all the time.",
+        "Simple and effective. You can tell that the developers put a lot of effort into this app. The only thing I can think of that could be improved is that the questions are getting a bit repetitive. Adding a few more would be great. Overall an amazing app :)",
+        "There are some good things about this app but also some disapointing as well. It's simple in terms of understanding, the design is very friendly and easy to operate. On the other hand everything is superficial and too generalized. It's just a simple mood tracker, nothing more. The simplicity makes it repetitive very fast and it doesn't help to analyze your problems. Overall it's pretty mediocre. I wouldn't recommend it for long term use, or if you can't get a refund for your insurance."
+      ]
+    },
+    {
+      "group_id": "G6",
+      "theme": "Positive and supportive feedback praising the app’s impact",
+      "review_ids": [
+        "6f006dd6-ee8c-44db-b8c8-2b5ad3570d1c",
+        "744404cb-b45b-4d48-a82d-aad7f42ecb69",
+        "4b916b6a-3876-4c25-b88e-2a097e9effa1",
+        "89f457e0-90a6-4570-955a-696bce251acd",
+        "6845c4de-e79c-4502-a20c-1ee0489bbb7e",
+        "735dd19a-1b69-4ce1-81a9-77c33b5312d1",
+        "5036b45c-d0ea-4320-8218-611ca36535d1",
+        "bbb31449-236a-4773-87be-97b1b0c64a8d",
+        "bc24eb71-77c8-4ef8-82ba-dbc6c03d5e4c",
+        "8ed59960-bd0f-4d5f-b05b-fb11e2934a77",
+        "becdaea2-c8f7-41c9-a504-e7727dc8c328",
+        "36e0167b-6774-4bc1-8705-58458a707ab1",
+        "047a3cf0-21a2-4f91-b29c-05fa163ebee9"
+      ],
+      "example_reviews": [
+        "This app is great and it's completely free! You check in with your mood and answer a handful of questions a few times a day (all private of course), you can look at any of the material, there is a course you can follow, depending on what you feel you need (like if you are exhausted, or if you want to increase strength mentally and physically, etc). Highly recommended!",
+        "So far I love this app. comprehensive insight, accurate and helpful information, and more in a well put together application. Nice work y'all.",
+        "Amazing app satisfied",
+        "really helpful ☆edit☆ WELL now I have been using this app for two weeks and damn I never thought it would be this perfect. Literally this is the best app I have ever downloaded in my entire life. No, this really helps and made me seriously consider the therapist step and made me pay attention to myself. When I responded to a question about having suicidal thoughts, there was no underestimation of the matter. Now I sent the therapy a REBORT based on the application and it is 100% realistic!!!!",
+        "mindDoc is a really great app for journaling and tracking moods because sometimes we ourselves don't know what we're feeling. These exercises help us clear our thoughts greatly.",
+        "Very helpful /thoughtful questions about my mental state. It's funny how just reflecting on and acknowledging my current mental state can bring calm.",
+        "This app is really helpful I've been struggling along and to see that it checks up on me thorough the day makes me happy",
+        "I just love this app, its so professional. it was recommended by my doctor, I find it really helpful to find the focus among the many feelings and thoughts, I enjoy the exercises a lot, they are really useful and clear, and I also love the daily insights and short reads. I highly recommend!",
+        "An amazing app! Worth every penny for the pro version",
+        "Helpful to have daily reminders to track my mood! I also likes that it gives you reports on your overall mental health as you track. I think that the emotion choices are a bit limited--for example, I'm surprised \"stressed\" isn't on there. But overall a good app!",
+        "I've found this app super useful so far. I like the way it asks a few simple questions each day and uses that to recommend different activities in the app. The activities at super useful and informative and really help. It's super useful alongside my therapist because it gives me topics and thoughts that I can discuss with them. I also like the mood tracker",
+        "I love the app. Works like magic and helps me concentrate more on my feelings with the good questions.",
+        "Great app, very helpful!"
       ]
     }
-  ]}
+  ]
+}
