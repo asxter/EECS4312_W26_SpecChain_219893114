@@ -41,7 +41,7 @@ RANDOM_SEED = 42
 
 # Over-cluster first, then merge down using Groq
 N_MICRO_CLUSTERS = 18
-N_FINAL_GROUPS = 6
+N_FINAL_GROUPS = 5
 
 # Number of representative reviews to show the LLM per cluster
 N_REPRESENTATIVES_PER_MICRO = 5
@@ -466,6 +466,8 @@ def assemble_final_review_groups(
     merge_groups: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
     micro_by_id = {c.micro_id: c for c in micro_clusters}
+    review_by_id = {r.review_id: r for r in reviews}
+
     groups_out: List[Dict[str, Any]] = []
 
     for idx, merged in enumerate(merge_groups, start=1):
@@ -474,15 +476,12 @@ def assemble_final_review_groups(
         micro_ids = merged["micro_cluster_ids"]
 
         review_ids: List[str] = []
-        representative_bundle: List[Tuple[str, str]] = []
 
         for micro_id in micro_ids:
             c = micro_by_id[micro_id]
             review_ids.extend(c.review_ids)
-            representative_bundle.extend(
-                list(zip(c.representative_ids, c.representative_reviews_raw))
-            )
 
+        # Deduplicate while preserving order
         seen_ids = set()
         dedup_review_ids = []
         for rid in review_ids:
@@ -490,14 +489,14 @@ def assemble_final_review_groups(
                 seen_ids.add(rid)
                 dedup_review_ids.append(rid)
 
-        seen_example_texts = set()
-        example_reviews = []
-        for _, review_text in representative_bundle:
-            if review_text not in seen_example_texts:
-                seen_example_texts.add(review_text)
-                example_reviews.append(review_text)
-            if len(example_reviews) >= N_EXAMPLE_REVIEWS_PER_FINAL:
-                break
+        # IMPORTANT:
+        # Fill example_reviews using the exact review texts that match review_ids,
+        # in the same order as the IDs.
+        example_reviews = [
+            review_by_id[rid].review_text_raw
+            for rid in dedup_review_ids
+            if rid in review_by_id
+        ]
 
         groups_out.append(
             {
@@ -508,10 +507,7 @@ def assemble_final_review_groups(
             }
         )
 
-    return {"groups": groups_out}
-
-
-# -----------------------------
+    return {"groups": groups_out}# -----------------------------
 # Persona generation
 # -----------------------------
 
