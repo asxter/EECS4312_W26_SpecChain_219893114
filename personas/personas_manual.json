@@ -42,19 +42,19 @@
     "The app should not require payment at moments of peak user vulnerability"
   ],
   "evidence_reviews": [ "The G1 reviews, same with following personas, just entering review ID as per the template",
-        "4cf4ff8a-3aec-4219-ba79-5cc645cc1b15",
-        "a360c212-f023-438c-991b-a3f28f3dd7ba",
-        "b7e23fb5-2b6e-4cf8-bd4c-0ec67b273a1a",
-        "81c6e690-0ce4-4d0f-acf6-e2678939e1aa",
-        "c086cabd-06df-428e-bbba-864e4bd0778c",
-        "3d61709a-0872-45b0-a4d8-27d8db423c5a",
-        "39ef38ce-b7ed-4ad1-b391-98344d8e366d",
-        "affef279-7511-46e8-b4e4-8f9cc6da0a2b",
-        "f1c683f8-e041-444a-a0de-03c9c64e352f",
-        "f7f92b4a-fa1c-406e-a550-7ffad9f8b678",
-        "fad46f60-a4fe-45ed-8e73-515e505a9cf5",
-        "c048ffab-74fe-483c-8542-45a4fae1f743",
-        "2e69a0d8-f877-4ae3-b33d-60aa01f8ac85"  ]
+        "rev_1",
+        "rev_35",
+        "rev_47",
+        "rev_59",
+        "rev_60",
+        "rev_63",
+        "rev_79",
+        "rev_84",
+        "rev_95",
+        "rev_121",
+        "rev_136",
+        "rev_166",
+        "rev_167" ]
 }
 
     {
@@ -100,19 +100,19 @@
     "The system must not force users to reinstall to regain basic access"
   ],
   "evidence_reviews": [
-        "abe48d35-6cad-40f8-b5d9-a176ee371a4e",
-        "d66b13fb-dbd2-46e3-b70d-823311ff5a97",
-        "b0585e2b-d036-484b-a416-42d89d21e654",
-        "a585b5de-6b4a-4979-86f3-8238534857b9",
-        "008e22c8-46db-499e-8512-172b8fd6deac",
-        "39b7681d-28ed-4209-9b6d-f50668ded696",
-        "4a9b3a17-d2ae-4252-b2f9-91e05373a33c",
-        "1203993a-3f40-4a51-bba5-ea661049b9c3",
-        "6d93d49e-f641-4739-99fb-b1c1073318cd",
-        "a4262406-d7bd-46ea-84f2-caf84b308ff5",
-        "231e7e26-fc70-4c19-8054-2489fec6cda4",
-        "2252cfeb-b3c2-4d76-ad46-1369720d4389",
-        "d8a6ff9a-0c1e-4fb1-9dc2-a8fb0be9a822"
+        "rev_109",
+        "rev_201",
+        "rev_292",
+        "rev_525",
+        "rev_526",
+        "rev_538",
+        "rev_539",
+        "rev_540",
+        "rev_541",
+        "rev_543",
+        "rev_546",
+        "rev_548",
+        "rev_549"
   ]
 }
 {
@@ -158,19 +158,17 @@
     "Privacy choices must be surfaced before major personal disclosure"
   ],
   "evidence_reviews": [
-        "b69f4ef9-7d53-4e38-817e-9e506d787b03",
-        "8d328b9d-9b41-4bfc-a52f-24f5ac10f6b1",
-        "a01eb69d-877f-4ec3-8ada-e94608e0f2fd",
-        "fbdbce6a-fe56-4273-a957-af833fce24a7",
-        "d13b100a-d4f2-4ae7-9ca6-4a2013cd817e",
-        "eb334c9d-9486-443b-a05e-a32a25d0acdc",
-        "7725c06f-d31f-476d-a40a-afcb9f8dd42b",
-        "0f7939ee-4dbc-4869-a5e1-ef432e2d5e8c",
-        "c6477fab-eed5-4fcd-a0eb-0421678b829b",
-        "adb16f3c-49f6-4eef-8834-1ebfe8841c3f",
-        "744bfb68-393d-4e8b-9d4b-f61a08e26fbf",
-        "04c09e56-8e1b-40fd-9e67-d0cf0490b17d",
-        "1e0d7211-0786-46dc-a2bd-5a2f0f991679"
+        "rev_19",
+        "rev_33",
+        "rev_56",
+        "rev_78",
+        "rev_278",
+        "rev_472",
+        "rev_820",
+        "rev_671",
+        "rev_722",
+        "rev_2187",
+        "rev_2397"
   ]
 }
 {
@@ -216,19 +214,19 @@
     "Notifications must not be so excessive that they drive disengagement"
   ],
   "evidence_reviews": [
-        "4d818c25-71e6-49f1-8a43-1c7cfd90e226",
-        "db7ae432-6ed4-4245-8d79-098f4b49f2a4",
-        "9f647e59-599a-4a00-a893-7a037aaea27b",
-        "5eb82c4a-34d9-4ee6-bb48-2bc98f5dcc20",
-        "f76b46c8-8a45-4ae2-b487-159f1ba986c1",
-        "3ea0b7a3-7e96-4f95-8d39-bb77ffaf10b3",
-        "0546ea68-4b3b-4791-8a88-e09ed9c9fd35",
-        "6ef3608d-21d9-4023-9a68-ece16a6da572",
-        "95fe0295-c662-444c-912f-4385d1f9b459",
-        "1bcdc380-96f4-48e4-b36d-9b870ad9b264",
-        "c1b895f5-3b08-4d86-8286-bc565bf6160c",
-        "0290564f-afe1-49df-b12d-d03504a9cfcb",
-        "9f39ad00-1dae-4860-82bc-dc6a3c4f446d"
+        "rev_40",
+        "rev_154",
+        "rev_191",
+        "rev_202",
+        "rev_232",
+        "rev_284",
+        "rev_519",
+        "rev_520",
+        "rev_529",
+        "rev_658",
+        "rev_659",
+        "rev_664",
+        "rev_667"
   ]
 }
 {
@@ -274,19 +272,19 @@
     "Users should receive value proportional to the effort of repeated check-ins"
   ],
   "evidence_reviews": [
-        "e45752e5-ba84-41b6-be18-d6a920a2f523",
-        "74cf37a5-1864-4d8f-bbd2-befe6d3f428d",
-        "90970984-6996-464e-a369-75b868574eeb",
-        "75bf3047-c5e8-4c3f-a0cf-8f1453ae9e09",
-        "967136a2-4e76-484b-99d1-6717ce5f89d9",
-        "99662db6-51dd-416c-80c3-1150cb7c75d1",
-        "007bd2be-2826-4067-860b-c5654fe75c1a",
-        "1bd43c7c-4f5e-41c4-bb2c-4b8c268913ae",
-        "d7d8d31e-ab92-4c59-96b4-75e5c76c0579",
-        "8a4f00c5-1f58-4bee-a59f-9f99821c47cb",
-        "bbe680a1-bdde-4a3f-9908-db49aa9365c7",
-        "ef1ea885-2462-4a65-bcd2-7d78bf4a9271",
-        "3ac489ca-d7cc-4e9d-91ee-755bab9e788e"
+        "rev_31",
+        "rev_90",
+        "rev_93",
+        "rev_94",
+        "rev_110",
+        "rev_114",
+        "rev_125",
+        "rev_151",
+        "rev_153",
+        "rev_74",
+        "rev_149",
+        "rev_209",
+        "rev_411"
   ]
 }
 {
@@ -329,19 +327,19 @@
     "The app should maintain user trust through consistent quality"
   ],
   "evidence_reviews": [
-        "6f006dd6-ee8c-44db-b8c8-2b5ad3570d1c",
-        "744404cb-b45b-4d48-a82d-aad7f42ecb69",
-        "4b916b6a-3876-4c25-b88e-2a097e9effa1",
-        "89f457e0-90a6-4570-955a-696bce251acd",
-        "6845c4de-e79c-4502-a20c-1ee0489bbb7e",
-        "735dd19a-1b69-4ce1-81a9-77c33b5312d1",
-        "5036b45c-d0ea-4320-8218-611ca36535d1",
-        "bbb31449-236a-4773-87be-97b1b0c64a8d",
-        "bc24eb71-77c8-4ef8-82ba-dbc6c03d5e4c",
-        "8ed59960-bd0f-4d5f-b05b-fb11e2934a77",
-        "becdaea2-c8f7-41c9-a504-e7727dc8c328",
-        "36e0167b-6774-4bc1-8705-58458a707ab1",
-        "047a3cf0-21a2-4f91-b29c-05fa163ebee9"
+        "rev_7",
+        "rev_8",
+        "rev_23",
+        "rev_27",
+        "rev_34",
+        "rev_45",
+        "rev_51",
+        "rev_52",
+        "rev_58",
+        "rev_65",
+        "rev_66",
+        "rev_67",
+        "rev_92"
   ]
 }
 
