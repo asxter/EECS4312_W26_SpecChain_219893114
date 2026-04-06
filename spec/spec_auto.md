@@ -1,104 +1,104 @@
 # Requirement ID: FR_auto_1
 
-- Description: [The system shall allow users to track their emotions effectively.]
-- Source Persona: [Emotional Tracker]
-- Traceability: [Derived from review group A3]
-- Acceptance Criteria: [Given the user is logged in, When they select an emotion to track, Then the system records the emotion with a timestamp.]
+- Description: [The system shall allow users to track their daily mood and emotional state.]
+- Source Persona: [Mindful Tracker]
+- Traceability: [Derived from review group A2]
+- Acceptance Criteria: [Given a user logs in daily, When they select their mood, Then the system records the mood entry.]
 
 # Requirement ID: FR_auto_2
 
-- Description: [The system shall provide users with insights into their emotional state.]
-- Source Persona: [Appreciative User]
+- Description: [The system shall provide a simple and effective way for users to track their emotions.]
+- Source Persona: [Satisfied Self-Tracker]
 - Traceability: [Derived from review group A1]
-- Acceptance Criteria: [Given the user has tracked emotions for a week, When they view their dashboard, Then the system displays a summary of their emotional state.]
+- Acceptance Criteria: [Given a user wants to track their emotions, When they use the app, Then they can easily log their emotions.]
 
 # Requirement ID: FR_auto_3
 
-- Description: [The system shall allow users to identify patterns in their behavior and mood.]
-- Source Persona: [Emotionally Aware Tracker]
-- Traceability: [Derived from review group A4]
-- Acceptance Criteria: [Given the user has tracked emotions for a month, When they view their patterns, Then the system displays correlations between emotions and events.]
+- Description: [The system shall allow users to reflect on their emotional state and changes over time.]
+- Source Persona: [Mindful Tracker]
+- Traceability: [Derived from review group A2]
+- Acceptance Criteria: [Given a user has logged mood entries, When they view their history, Then they can see trends in their emotional state.]
 
 # Requirement ID: FR_auto_4
 
-- Description: [The system shall send reminders to users to maintain a consistent mental health tracking routine.]
-- Source Persona: [Mindful Tracker]
-- Traceability: [Derived from review group A2]
-- Acceptance Criteria: [Given the user has set a tracking goal, When the goal due date approaches, Then the system sends a reminder notification.]
+- Description: [The system shall provide users with insights into their mental health patterns.]
+- Source Persona: [Emotional Tracker]
+- Traceability: [Derived from review group A3]
+- Acceptance Criteria: [Given a user has logged emotional data, When they view their insights, Then they can see patterns in their mental health.]
 
 # Requirement ID: FR_auto_5
 
-- Description: [The system shall minimize notifications to users.]
-- Source Persona: [Emotional Tracker]
-- Traceability: [Derived from review group A3]
-- Acceptance Criteria: [Given the user has set notification preferences, When the system generates notifications, Then the system only sends notifications according to user preferences.]
+- Description: [The system shall offer a user-friendly and gentle tracking experience.]
+- Source Persona: [Mindful Tracker]
+- Traceability: [Derived from review group A2]
+- Acceptance Criteria: [Given a user is new to the app, When they complete the onboarding process, Then they can easily start tracking their mood.]
 
 # Requirement ID: FR_auto_6
 
-- Description: [The system shall provide users with a tool for self-reflection and therapy discussions.]
-- Source Persona: [Interested Tracker]
-- Traceability: [Derived from review group A6]
-- Acceptance Criteria: [Given the user has completed a tracking session, When they view their reflection, Then the system provides a summary for discussion with a therapist.]
+- Description: [The system shall allow users to manage depressive episodes and improve their mental well-being.]
+- Source Persona: [Emotional Tracker]
+- Traceability: [Derived from review group A3]
+- Acceptance Criteria: [Given a user is experiencing a depressive episode, When they use the app, Then they can access tools to help manage their episode.]
 
 # Requirement ID: FR_auto_7
 
-- Description: [The system shall allow users to change the app's language.]
-- Source Persona: [Appreciative User]
+- Description: [The system shall provide users with a private space for self-expression.]
+- Source Persona: [Satisfied Self-Tracker]
 - Traceability: [Derived from review group A1]
-- Acceptance Criteria: [Given the user is logged in, When they select a language, Then the system changes the app's language accordingly.]
+- Acceptance Criteria: [Given a user logs a private entry, When they save the entry, Then the entry is not shared with anyone.]
 
 # Requirement ID: FR_auto_8
 
-- Description: [The system shall provide users with reliable and valid information.]
-- Source Persona: [Frustrated Mental Health Tracker]
-- Traceability: [Derived from review group A5]
-- Acceptance Criteria: [Given the user views educational content, When the content is displayed, Then the system ensures the information is from a credible source.]
+- Description: [The system shall support multiple language options for users.]
+- Source Persona: [Satisfied Self-Tracker]
+- Traceability: [Derived from review group A1]
+- Acceptance Criteria: [Given a user selects a language, When they use the app, Then the app is displayed in their selected language.]
 
 # Requirement ID: FR_auto_9
 
-- Description: [The system shall not request users to leave reviews excessively.]
+- Description: [The system shall allow users to access their results without unnecessary constraints.]
 - Source Persona: [Frustrated Mental Health Tracker]
-- Traceability: [Derived from review group A5]
-- Acceptance Criteria: [Given the user has left a review, When the system prompts for another review, Then the system waits a minimum of 30 days before prompting again.]
+- Traceability: [Derived from review group A4]
+- Acceptance Criteria: [Given a user has logged data, When they view their results, Then they can access their results without a subscription.]
 
 # Requirement ID: FR_auto_10
 
-- Description: [The system shall provide users with a user-friendly and gentle tracking experience.]
-- Source Persona: [Mindful Tracker]
-- Traceability: [Derived from review group A2]
-- Acceptance Criteria: [Given the user starts a tracking session, When they interact with the tracking interface, Then the system provides clear instructions and minimal distractions.]
+- Description: [The system shall provide users with thought-provoking questions to reflect on their mental health.]
+- Source Persona: [Curious Mental Health Tracker]
+- Traceability: [Derived from review group A5]
+- Acceptance Criteria: [Given a user is reflecting on their mental health, When they use the app, Then they are presented with thought-provoking questions.]
 
 # Requirement ID: FR_auto_11
 
-- Description: [The system shall allow users to track their mood and thoughts.]
-- Source Persona: [Interested Tracker]
-- Traceability: [Derived from review group A6]
-- Acceptance Criteria: [Given the user starts a tracking session, When they enter their mood and thoughts, Then the system records the information with a timestamp.]
+- Description: [The system shall allow users to track their mental health and mood over time.]
+- Source Persona: [Curious Mental Health Tracker]
+- Traceability: [Derived from review group A5]
+- Acceptance Criteria: [Given a user logs mood entries, When they view their history, Then they can see their mood trends over time.]
 
 # Requirement ID: FR_auto_12
 
-- Description: [The system shall provide users with emotional support and relief through self-reflection.]
-- Source Persona: [Emotionally Aware Tracker]
+- Description: [The system shall provide users with valuable insights for therapy discussions.]
+- Source Persona: [Frustrated Mental Health Tracker]
 - Traceability: [Derived from review group A4]
-- Acceptance Criteria: [Given the user completes a reflection session, When they view their insights, Then the system provides suggestions for emotional support.]
+- Acceptance Criteria: [Given a user has logged data, When they view their insights, Then they can use the insights to inform their therapy discussions.]
 
 # Requirement ID: FR_auto_13
 
-- Description: [The system shall allow users to utilize the app as a tool for professional care discussions.]
-- Source Persona: [Appreciative User]
+- Description: [The system shall offer a straightforward and private experience for users.]
+- Source Persona: [Satisfied Self-Tracker]
 - Traceability: [Derived from review group A1]
-- Acceptance Criteria: [Given the user generates a report, When they share the report with a professional, Then the system ensures the report is easily exportable and shareable.]
+- Acceptance Criteria: [Given a user logs data, When they use the app, Then their data is kept private.]
 
 # Requirement ID: FR_auto_14
 
-- Description: [The system shall not limit access to results behind a paywall.]
-- Source Persona: [Frustrated Mental Health Tracker]
-- Traceability: [Derived from review group A5]
-- Acceptance Criteria: [Given the user has a free account, When they view their results, Then the system provides access to basic insights without requiring a subscription.]
+- Description: [The system shall allow users to identify patterns of behavior and feelings.]
+- Source Persona: [Emotional Tracker]
+- Traceability: [Derived from review group A3]
+- Acceptance Criteria: [Given a user logs emotional data, When they view their insights, Then they can see patterns in their behavior and feelings.]
 
 # Requirement ID: FR_auto_15
 
-- Description: [The system shall provide users with a secure and private environment for expressing emotions.]
-- Source Persona: [Appreciative User]
+- Description: [The system shall provide users with a simple and effective app for self-tracking.]
+- Source Persona: [Satisfied Self-Tracker]
 - Traceability: [Derived from review group A1]
-- Acceptance Criteria: [Given the user logs in, When they express emotions, Then the system encrypts the data and ensures it is not shared with third parties.]
+- Acceptance Criteria: [Given a user wants to track their emotions, When they use the app, Then they can easily log their emotions and view their history.]
