@@ -2,30 +2,208 @@
   "personas": [
     {
       "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
+      "name": "Self-Discovering User",
+      "description": "A user who turns to the app to better understand their emotions, reflect on their experiences, and build self-awareness around their mental state.",
       "derived_from_group": "H1",
       "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
+        "Gain a better understanding of their emotions",
+        "Reflect on how they feel throughout the day",
+        "Build self-awareness before or alongside seeking help",
+        "Feel more confident describing their emotional state"
       ],
       "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
+        "Has difficulty naming or explaining what they are feeling",
+        "Struggles to make sense of confusing or mixed emotions",
+        "Finds it hard to validate their feelings without some structure",
+        "May avoid reflection when it feels emotionally heavy or unclear"
       ],
       "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
+        "Uses the app for regular emotional self-check-ins",
+        "May use the app before therapy or alongside other support",
+        "Prefers guided questions over open-ended journaling",
+        "Uses the app mainly for self-understanding rather than symptom logging"
       ],
       "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
+        "Needs prompts that feel supportive rather than generic",
+        "Needs the reflection process to feel manageable and not overwhelming",
+        "Needs emotional insight without a steep learning curve",
+        "Needs an experience that is gentle enough to return to consistently"
       ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_41"
+        "rev_82",
+        "rev_135",
+        "rev_158",
+        "rev_168",
+        "rev_321",
+        "rev_389",
+        "rev_453",
+        "rev_597"
       ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
+      "notes": "I kept the original automated persona, but made it more specific to H1 by centering it on self-reflection and emotional understanding. I removed weaker assumptions about premium use and tightened the supporting points so each one covers a different aspect of the user's needs."
+    },
+    {
+      "id": "P_hybrid_2",
+      "name": "Satisfied User",
+      "description": "A user who has had a clearly positive experience with the app and values it as a helpful, insightful, and supportive tool for regular emotional check-ins.",
+      "derived_from_group": "H2",
+      "goals": [
+        "Use the app for regular emotional check-ins",
+        "Receive helpful insights and guidance",
+        "Keep using a tool they find supportive and worthwhile",
+        "Maintain a simple habit that supports emotional well-being"
+      ],
+      "pain_points": [
+        "Needs emotional support that feels genuinely useful",
+        "Wants the app to stay simple rather than become frustrating",
+        "May lose interest if the app stops feeling worthwhile",
+        "Needs continued value even when not dealing with a major crisis"
+      ],
+      "context": [
+        "Uses the app as part of everyday self-care",
+        "Returns to it because it feels supportive and encouraging",
+        "Sees the app as something beneficial rather than burdensome",
+        "Represents users whose feedback is driven more by appreciation than by complaints"
+      ],
+      "constraints": [
+        "Prefers an experience that stays clear and low-effort",
+        "Needs insights that are easy to understand quickly",
+        "Needs enough ongoing usefulness to keep the habit going",
+        "Is more likely to stay engaged when the app remains consistent and positive"
+      ],
+      "evidence_reviews": [
+        "rev_8",
+        "rev_52",
+        "rev_67",
+        "rev_132",
+        "rev_160",
+        "rev_212",
+        "rev_223",
+        "rev_253"
+      ],
+      "notes": "I kept this persona close to the automated version because the group is still mainly broad praise. I removed narrow assumptions like doctor recommendation and technical issues, and made the supporting bullets more distinct so they better reflect general satisfaction without sounding repetitive."
+    },
+    {
+      "id": "P_hybrid_3",
+      "name": "Mindful Tracker",
+      "description": "A user who relies on the app to monitor mood changes, notice emotional patterns, and better understand their mental health over time.",
+      "derived_from_group": "H3",
+      "goals": [
+        "Track mood changes over time",
+        "Reflect on emotional patterns",
+        "Use app insights to better understand mental health",
+        "Keep records that support personal reflection or outside conversations"
+      ],
+      "pain_points": [
+        "Has trouble noticing patterns without structured tracking",
+        "Finds it difficult to explain emotional changes from memory alone",
+        "Needs help connecting daily check-ins into longer-term trends",
+        "May feel that raw entries are not useful unless they lead to insight"
+      ],
+      "context": [
+        "Uses the app as part of day-to-day mental health tracking",
+        "May use tracking results for personal reflection or for therapy discussions",
+        "Benefits from seeing moods over time instead of in isolated moments",
+        "Uses the app to notice trends, triggers, and shifts in emotional state"
+      ],
+      "constraints": [
+        "Needs tracking to be easy enough to maintain consistently",
+        "Needs summaries that are clear enough to act on",
+        "Needs the app to turn repeated entries into meaningful patterns",
+        "Needs long-term value so tracking does not feel repetitive or pointless"
+      ],
+      "evidence_reviews": [
+        "rev_87",
+        "rev_138",
+        "rev_148",
+        "rev_254",
+        "rev_395",
+        "rev_460",
+        "rev_474",
+        "rev_270"
+      ],
+      "notes": "I kept the core of the automated persona because it already matched this group well. I removed pricing and subscription issues as core traits, since H3 is more clearly about tracking, trends, and mental-health insight. I also separated the bullets so they cover memory, pattern recognition, interpretation, and consistency without overlapping."
+    },
+    {
+      "id": "P_hybrid_4",
+      "name": "Frugal Mental Health Enthusiast",
+      "description": "A budget-conscious user who finds the app helpful and easy to use, but actively weighs whether the free version is sufficient and whether premium features are worth paying for.",
+      "derived_from_group": "H4",
+      "goals": [
+        "Get meaningful mental health support from the app",
+        "Use the free version as much as possible before paying",
+        "Decide whether premium features are worth the cost",
+        "Find a version of the app that feels valuable for everyday use"
+      ],
+      "pain_points": [
+        "Some useful features are limited in the free version",
+        "It is unclear whether premium adds enough value to justify the cost",
+        "The free version may feel helpful but slightly incomplete",
+        "Has to judge the app's usefulness before committing money"
+      ],
+      "context": [
+        "Usually starts with or stays on the free version",
+        "Pays close attention to usability as well as emotional support",
+        "Compares what is available for free with what is locked behind payment",
+        "Treats early use as both self-care and an informal evaluation of the app"
+      ],
+      "constraints": [
+        "Budget limits willingness to upgrade immediately",
+        "Needs the free tier to be useful on its own",
+        "Needs premium benefits to feel concrete rather than vague",
+        "Needs the app to be easy and efficient enough to justify continued use"
+      ],
+      "evidence_reviews": [
+        "rev_55",
+        "rev_58",
+        "rev_97",
+        "rev_107",
+        "rev_110",
+        "rev_111",
+        "rev_121",
+        "rev_164"
+      ],
+      "notes": "I kept the automated persona's direction, but aligned it more tightly with H4's revised focus on free-version value, usability, and upgrade trade-offs. I removed repeated budget-related wording and separated the bullets into feature limits, purchase uncertainty, usage context, and practical constraints."
+    },
+    {
+      "id": "P_hybrid_5",
+      "name": "Frustrated Mental Health Tracker",
+      "description": "A user who depends on the app for mental health support and tracking, but becomes frustrated when paywalls, technical failures, repetitive check-ins, or delayed results reduce the app's usefulness.",
+      "derived_from_group": "H5",
+      "goals": [
+        "Track and manage mental health reliably",
+        "Access meaningful insights and support without major barriers",
+        "Receive the expected check-ins, reminders, and results consistently",
+        "Use the app as a dependable part of a mental health routine"
+      ],
+      "pain_points": [
+        "Important features or insights may be locked behind payment",
+        "Technical issues such as blank screens or broken notifications interrupt use",
+        "Repeated questions can make the app feel tiring instead of helpful",
+        "Delayed or missing results weaken confidence in the app"
+      ],
+      "context": [
+        "Uses the app during periods of stress or active emotional difficulty",
+        "May rely on reminders and repeated check-ins to maintain routine",
+        "Can be either a newer user waiting for results or a longer-term user affected by updates",
+        "Often uses the app as part of a broader effort to manage mental health consistently"
+      ],
+      "constraints": [
+        "May have limited willingness or ability to pay for premium access",
+        "Needs the app to function reliably over time",
+        "Needs saved progress and routine features to remain stable after updates",
+        "May abandon the app if barriers and failures outweigh the benefit"
+      ],
+      "evidence_reviews": [
+        "rev_4",
+        "rev_6",
+        "rev_13",
+        "rev_15",
+        "rev_16",
+        "rev_20",
+        "rev_22",
+        "rev_23"
+      ],
+      "notes": "I kept this persona close to the automated one, but expanded it so it matches the full H5 group rather than only paywall complaints. I removed repetitive frustration language and made each supporting point distinct by separating access issues, technical reliability, repeated questioning, and delayed outcomes."
     }
   ]
 }
