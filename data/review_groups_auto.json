@@ -1,12 +1,200 @@
 {
-  "groups": [
+  "personas": [
     {
-      "group_id": "A1",
-      "theme": "Workout logging issues",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
-      "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+      "id": "P_auto_1",
+      "name": "Appreciative User",
+      "description": "A user who generally appreciates the app for its ability to help them monitor and understand their emotions.",
+      "derived_from_group": "A1",
+      "goals": [
+        "To effectively monitor and understand their emotional state",
+        "To be honest with themselves in a private and safe environment",
+        "To utilize the app as a tool for self-awareness and potentially for discussions with doctors"
+      ],
+      "pain_points": [
+        "Inability to change the app's language",
+        "Potential issues with subscription"
+      ],
+      "context": [
+        "Daily usage for tracking mood",
+        "Valuing privacy and safety in expressing emotions",
+        "Using the app to prepare for or discuss with doctors"
+      ],
+      "constraints": [
+        "Language limitation (cannot change language)",
+        "Potential financial constraint (subscription model)"
+      ],
+      "evidence_reviews": [
+        "4c647c1c-6e45-442c-a691-42ee61a230a1",
+        "e43cabdd-bfdf-412d-a5b5-c9bcc761aab2",
+        "680396ab-93d4-4113-8d5b-a57dd6cc495f",
+        "9381054c-7081-4294-9fc3-1b8702a6d6b4",
+        "ed0e8b18-21ec-4b65-a47e-feead6b8cd87",
+        "baa41bfa-899c-4722-b6df-e4d2e60d1e9a",
+        "09c37782-61ee-4efe-b496-9b05cc18e1e1",
+        "a9632f57-293c-4199-8910-2e38a0db0289"
+      ]
+    },
+    {
+      "id": "P_auto_2",
+      "name": "Mindful Tracker",
+      "description": "A mental health enthusiast seeking to monitor and understand their emotional state.",
+      "derived_from_group": "A2",
+      "goals": [
+        "Track and manage my mood patterns",
+        "Gain clarity on my emotional state",
+        "Reflect on my mental health progress over time"
+      ],
+      "pain_points": [
+        "Difficulty recognizing and understanding my emotions",
+        "Struggling to maintain a consistent mental health tracking routine"
+      ],
+      "context": [
+        "Daily life and mental health management",
+        "Personal growth and self-awareness"
+      ],
+      "constraints": [
+        "Needs a user-friendly and gentle tracking experience",
+        "Requires regular reminders and encouragement to maintain tracking habit"
+      ],
+      "evidence_reviews": [
+        "399f320b-6fac-444a-8d0a-e9688d2ef8d0",
+        "333597f6-cdf1-42f3-96fa-dfbc1f555478",
+        "ac95ee03-43ce-4109-9577-6cf965302033",
+        "64479bef-a5b0-4542-86dc-bb24091543c2",
+        "226ae1df-2814-4c38-9199-7d26100539ec",
+        "a670db91-8b72-43a2-90ad-dfd4390c56ee",
+        "57c74e3c-5c2c-4452-8f9d-11bcc19a2f9e",
+        "29315110-d073-4682-8ed4-24c94f9e4e5d"
+      ]
+    },
+    {
+      "id": "P_auto_3",
+      "name": "Emotional Tracker",
+      "description": "A user who tracks their emotions and seeks help through mobile apps.",
+      "derived_from_group": "A3",
+      "goals": [
+        "Track emotions effectively",
+        "Understand triggers for anxiety or sadness",
+        "Get help with emotional management"
+      ],
+      "pain_points": [
+        "Too many notifications",
+        "App needs improvements"
+      ],
+      "context": [
+        "Experiencing emotional struggles (anxiety, sadness)",
+        "Seeking tools for emotional management"
+      ],
+      "constraints": [
+        "Needs an app that provides accurate insights",
+        "Wants to minimize notifications"
+      ],
+      "evidence_reviews": [
+        "e57fd9ce-d1b7-4829-8e28-ad2b3566f789",
+        "7fbed9e8-94fc-47cd-801c-bcf9510db42d",
+        "c0dc4d31-89a0-49e2-a428-0b8221b13a7f",
+        "96717483-7a63-4571-8382-79de1dbc6d26",
+        "fe3f7bfa-bc70-4dc8-abb3-c2fbfb4402c2",
+        "f76b46c8-8a45-4ae2-b487-159f1ba986c1",
+        "8c7129ba-9658-4c32-8e73-9703e8ea1380"
+      ]
+    },
+    {
+      "id": "P_auto_4",
+      "name": "Emotionally Aware Tracker",
+      "description": "A user seeking emotional support and understanding through mood tracking.",
+      "derived_from_group": "A4",
+      "goals": [
+        "Understand and track my emotions effectively",
+        "Identify patterns in my behavior and mood",
+        "Find emotional support and relief through self-reflection"
+      ],
+      "pain_points": [
+        "Difficulty managing and expressing emotions",
+        "Struggling with depressive episodes or mood swings",
+        "Need for a tool to help process and release emotions"
+      ],
+      "context": [
+        "Daily life, managing stress and emotions",
+        "During depressive episodes or difficult times",
+        "When seeking self-awareness and personal growth"
+      ],
+      "constraints": [
+        "Limited time for self-reflection",
+        "Emotional vulnerability and openness required"
+      ],
+      "evidence_reviews": [
+        "67593a76-3fa5-43bb-880d-ef06a35f17c0",
+        "4bf2111c-c99a-4427-9b78-932259df6b19",
+        "80a14d84-fd0a-4e93-a558-b69a232874e0",
+        "2055f68d-aede-4157-973c-4ce7d0312d98",
+        "ac62defa-842d-4616-9064-3252e290fcd3",
+        "465dce71-e692-4309-8726-502ee22d9bcb",
+        "bc8ae724-7095-4907-bae9-33e62e911053",
+        "a153b311-fa5d-4cd5-9b98-866c8d2ab514"
+      ]
+    },
+    {
+      "id": "P_auto_5",
+      "name": "Frustrated Mental Health Tracker",
+      "description": "A mental health app user frustrated with limitations and subscription issues.",
+      "derived_from_group": "A5",
+      "goals": [
+        "Effectively track and manage mental health",
+        "Receive reliable and valid information",
+        "Utilize the app as a tool for professional care discussions"
+      ],
+      "pain_points": [
+        "Limited access to results behind a paywall",
+        "Difficulties with subscription and refund processes",
+        "Frequent requests to leave reviews"
+      ],
+      "context": [
+        "Long-term users of mental health apps",
+        "Individuals seeking to understand and manage their mental health",
+        "Users who value the app as a tool for professional care discussions"
+      ],
+      "constraints": [
+        "Limited budget or willingness to pay for premium features",
+        "Frustration with app limitations and subscription issues",
+        "Need for reliable and valid information"
+      ],
+      "evidence_reviews": [
+        "11eaf701-f192-4fe1-b934-82fc5aae67d1",
+        "a360c212-f023-438c-991b-a3f28f3dd7ba",
+        "3d61709a-0872-45b0-a4d8-27d8db423c5a",
+        "d07ac3a5-2557-4ac8-a70c-27abf4f3c7db"
+      ]
+    },
+    {
+      "id": "P_auto_6",
+      "name": "Interested Tracker",
+      "description": "A curious user interested in tracking their mood and thoughts, seeking a helpful tool for self-reflection and therapy discussions.",
+      "derived_from_group": "A6",
+      "goals": [
+        "Track mood and thoughts",
+        "Reflect on current situation and personality",
+        "Discuss with therapist"
+      ],
+      "pain_points": [
+        "Limited emotional options for daily tracking"
+      ],
+      "context": [
+        "Seeking self-reflection and therapy discussion tools",
+        "Interested in mental health tracking"
+      ],
+      "constraints": [
+        "Needs to be easy to use and structured"
+      ],
+      "evidence_reviews": [
+        "92b1af6b-9c45-42bf-8eed-d43be304939b",
+        "24a2b9ad-b99e-4a69-a031-d35f09797660",
+        "e37c988e-be96-43ed-8bd2-8c4bdc547dcf",
+        "94af4461-8a39-4a40-a320-5fb151e0e73b",
+        "9e802027-f7f2-4138-ba91-ec3d1bf2458b",
+        "7f3c2886-7268-46c1-8b88-1af8b8e09582",
+        "7b53b04a-16e3-4ea8-acd1-a96d3f9a4952",
+        "784a4093-20ef-4c67-b11e-a191382acff9"
       ]
     }
   ]
