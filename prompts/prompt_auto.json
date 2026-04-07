@@ -1,3 +1,37 @@
 {
-    "prompt": ""
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "clustering": {
+    "method": "TF-IDF on cleaned/lemmatized reviews + KMeans micro-clusters + LLM representative selection + LLM merge",
+    "n_micro_clusters": 24,
+    "n_final_groups": 5,
+    "tfidf": {
+      "max_features": 5000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 2,
+      "max_df": 0.9
+    },
+    "random_seed": 42,
+    "final_example_ratio": 0.1,
+    "min_final_examples": 5
+  },
+  "prompts": {
+    "micro_cluster_representative_prompt": "You are selecting the most representative reviews for a micro-cluster of app reviews.\n\nYour job:\n- choose exactly {n_examples} review IDs, or all available if fewer than {n_examples}\n- choose reviews that best capture the main pattern in the cluster\n- prefer reviews that are clear, specific, and representative\n- avoid near-duplicate reviews unless they are especially central\n- ONLY choose from the provided candidate review IDs\n- do not invent IDs\n\nReturn STRICT JSON only with this schema:\n{{\n  \"selected_review_ids\": [\"rev_1\", \"rev_2\", \"rev_3\"]\n}}\n\nMicro-cluster metadata:\n{cluster_metadata}\n\nCandidate reviews:\n{candidate_reviews_json}",
+    "micro_cluster_theme_prompt": "You are labeling a cluster of app reviews.\n\nYour job:\n- infer ONE clear theme for the cluster\n- keep the theme short and specific\n- do not use vague themes like \"general issues\"\n- do not mention the clustering process\n- base your answer only on the provided evidence\n\nReturn STRICT JSON only with this schema:\n{{\n  \"theme\": \"short theme label\",\n  \"summary\": \"1-2 sentence explanation of the pattern in the reviews\"\n}}\n\nCluster metadata:\n{cluster_metadata}",
+    "merge_micro_clusters_prompt": "You are given automatically generated micro-clusters of app reviews.\n\nYour job:\n- merge these micro-clusters into exactly {n_final_groups} final groups\n- each final group must represent a coherent, user-meaningful theme\n- groups should be similar to a manual requirements-engineering grouping, not random ML buckets\n- use all micro-clusters exactly once\n- do not leave any micro-cluster unassigned\n- do not assign any micro-cluster to more than one final group\n\nReturn STRICT JSON only with this schema:\n{{\n  \"groups\": [\n    {{\n      \"group_id\": \"A1\",\n      \"theme\": \"clear final theme\",\n      \"micro_cluster_ids\": [\"M1\", \"M4\"]\n    }}\n  ]\n}}\n\nMicro-clusters:\n{micro_clusters_json}",
+    "final_group_representative_prompt": "You are selecting the most representative example reviews for a final grouped set of app reviews.\n\nYour job:\n- choose exactly {n_examples} review IDs, or all available if fewer than {n_examples}\n- choose reviews that best represent the final group theme\n- capture the main sub-patterns within the group\n- prefer reviews that are clear, specific, and representative\n- avoid near-duplicates unless truly necessary\n- ONLY choose from the provided candidate review IDs\n- do not invent IDs\n\nReturn STRICT JSON only with this schema:\n{{\n  \"selected_review_ids\": [\"rev_1\", \"rev_2\", \"rev_3\"]\n}}\n\nFinal group metadata:\n{group_metadata}\n\nCandidate reviews:\n{candidate_reviews_json}",
+    "persona_prompt": "You are generating a persona from an automatically grouped set of app reviews.\n\nRules:\n- Base the persona only on the provided evidence\n- Do not invent unsupported details\n- Make the persona specific, realistic, and requirements-oriented\n- Keep goals, pain points, context, and constraints grounded in the evidence\n- evidence_reviews must contain review IDs only, not full review text\n\nReturn STRICT JSON only with this schema:\n{{\n  \"id\": \"{persona_id}\",\n  \"name\": \"persona name\",\n  \"description\": \"1-2 sentence description\",\n  \"derived_from_group\": \"{group_id}\",\n  \"goals\": [\"...\"],\n  \"pain_points\": [\"...\"],\n  \"context\": [\"...\"],\n  \"constraints\": [\"...\"],\n  \"evidence_reviews\": [\"review_id_1\", \"review_id_2\", \"review_id_3\"]\n}}\n\nGroup theme:\n{group_theme}\n\nRepresentative evidence:\n{group_examples_json}"
+  },
+  "spec_generation": {
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "n_requirements": 15,
+    "prompt": "You are generating software requirements from personas for a requirements engineering course project.\n\nYour job:\n- Generate exactly {n_requirements} functional requirements\n- Base every requirement only on the provided personas\n- Do not invent unsupported capabilities\n- Requirements must be specific, testable, and written as system behavior\n- Avoid vague language such as \"easy\", \"better\", \"fast\", \"user-friendly\", \"seamless\", unless you define it measurably\n- Each requirement must be traceable to exactly one persona and exactly one review group\n- Acceptance criteria must be written in Given / When / Then form\n\nReturn STRICT JSON only with this schema:\n{{\n  \"requirements\": [\n    {{\n      \"requirement_id\": \"FR_auto_1\",\n      \"description\": \"The system shall ...\",\n      \"source_persona_id\": \"P_auto_1\",\n      \"source_persona_name\": \"Persona Name\",\n      \"traceability\": \"Derived from review group A1\",\n      \"acceptance_criteria\": \"Given ..., When ..., Then ...\"\n    }}\n  ]\n}}\n\nPersonas:\n{personas_json}"
+  },
+  "test_generation": {
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "tests_per_requirement": 2,
+    "prompt": "You are generating validation tests for a software requirement.\n\nYour job:\n- Generate exactly {tests_per_requirement} test scenarios for the requirement\n- Every test must validate the requirement directly\n- Tests must be clear, realistic, and executable\n- Steps must be concrete and ordered\n- expected_result must directly reflect the requirement's acceptance criteria\n- Do not invent unrelated system behavior\n\nReturn STRICT JSON only with this schema:\n{{\n  \"tests\": [\n    {{\n      \"test_id\": \"TEMP_1\",\n      \"requirement_id\": \"{requirement_id}\",\n      \"scenario\": \"short scenario title\",\n      \"steps\": [\n        \"step 1\",\n        \"step 2\",\n        \"step 3\"\n      ],\n      \"expected_result\": \"clear expected outcome\"\n    }}\n  ]\n}}\n\nRequirement:\n{requirement_json}"
+  }
 }
