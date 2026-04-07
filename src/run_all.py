@@ -1,4 +1,3 @@
-"""runs the full pipeline end-to-end"""
 """runs the entire SpecChain pipeline from start to finish"""
 #!/usr/bin/env python3
 """
@@ -6,41 +5,37 @@ src/run_all.py
 
 Master pipeline runner for EECS 4312 SpecChain.
 
-Executes every src/ script in order, installs required dependencies,
-and prints a clear summary of what was produced at each stage.
+Installs required dependencies, then executes every src/ script in order.
+At startup, asks whether to skip the data collection step so that
+reviews_raw.jsonl stays unchanged — this is important if you have already
+done manual or hybrid coding against that dataset, since re-scraping
+could change review IDs and break your manual work.
 
 Usage:
     python src/run_all.py
 
-On startup the script asks whether to re-run the data collection step
-(src/01_collect_or_import.py).  Skipping it keeps reviews_raw.jsonl
-unchanged, which is important if you have already done manual or hybrid
-coding against that dataset — re-scraping could change review IDs and
-break your manual work.
-
 Design choices:
-    We install dependencies automatically so the TA can run a single
-    command and see the whole pipeline work.  Each step is run as a
-    subprocess so that if one step fails, the error is visible and the
-    rest of the pipeline still attempts to continue.  The validate_repo
-    script is called at the very end to confirm all expected output
-    files exist.
+    Dependencies are installed automatically so the TA can run one
+    command and see everything work.  Each step runs as a subprocess
+    so failures are visible but don't crash the whole pipeline.  The
+    validate_repo script runs first (to show what's missing) and last
+    (to confirm everything was generated).
 
-Execution order and outputs:
-    Step 0:  src/00_validate_repo.py        → (pre-run check of repo structure)
-    Step 1:  Install dependencies (groq, google-play-scraper, nltk, etc.)
-    Step 2:  src/01_collect_or_import.py   → data/reviews_raw.jsonl
-    Step 3:  src/02_clean.py               → data/reviews_clean.jsonl
-    Step 4:  src/03_manual_coding_template.py → (verifies manual groups)
-    Step 5:  src/04_personas_manual.py      → (verifies manual personas)
-    Step 6:  src/05_personas_auto.py        → data/review_groups_auto.json
-                                              personas/personas_auto.json
-                                              prompts/prompt_auto.json
-    Step 7:  src/06_spec_generate.py        → spec/spec_auto.md
-    Step 8:  src/07_tests_generate.py       → tests/tests_auto.json
-    Step 9:  src/08_metrics.py --all        → metrics/metrics_auto.json
-                                              metrics/metrics_summary.json
-    Final:   src/00_validate_repo.py        → (post-run validation report)
+Execution order:
+    Step 0:  Install dependencies
+    Step 1:  src/00_validate_repo.py        → pre-run check
+    Step 2:  src/01_collect_or_import.py     → data/reviews_raw.jsonl
+    Step 3:  src/02_clean.py                → data/reviews_clean.jsonl
+    Step 4:  src/03_manual_coding_template.py → verifies manual groups
+    Step 5:  src/04_personas_manual.py       → verifies manual personas
+    Step 6:  src/05_personas_auto.py         → data/review_groups_auto.json
+                                               personas/personas_auto.json
+                                               prompts/prompt_auto.json
+    Step 7:  src/06_spec_generate.py         → spec/spec_auto.md
+    Step 8:  src/07_tests_generate.py        → tests/tests_auto.json
+    Step 9:  src/08_metrics.py --all         → metrics/metrics_auto.json
+                                               metrics/metrics_summary.json
+    Final:   src/00_validate_repo.py         → post-run validation
 """
 
 import subprocess
@@ -72,18 +67,18 @@ DEPENDENCIES = [
 # Helpers
 # ---------------------------------------------------------------------------
 
-def print_banner(step_num: int, description: str) -> None:
+def print_banner(step: str, description: str) -> None:
     """Print a visible banner between pipeline steps."""
     print()
     print("=" * 65)
-    print(f"  STEP {step_num}: {description}")
+    print(f"  STEP {step}: {description}")
     print("=" * 65)
     print()
 
 
 def install_dependencies() -> None:
     """Install all required Python packages."""
-    print_banner(0, "Installing dependencies")
+    print_banner("0", "Installing dependencies")
     for pkg in DEPENDENCIES:
         print(f"  Installing {pkg} ...")
         result = subprocess.run(
@@ -124,6 +119,7 @@ def ask_skip_collection() -> bool:
     """
     Ask the user whether to skip the data collection step.
     Defaults to skipping (Y) so that manual/hybrid data stays consistent.
+    If reviews_raw.jsonl doesn't exist, collection cannot be skipped.
     """
     raw_path = ROOT / "data" / "reviews_raw.jsonl"
 
@@ -158,58 +154,58 @@ def main() -> None:
     print("║           EECS 4312 — SpecChain Pipeline Runner               ║")
     print("╚═════════════════════════════════════════════════════════════════╝")
 
-    # --- Step 0: Pre-run repo validation ---
-    print_banner(0, "Pre-run validation — src/00_validate_repo.py")
-    run_script("00_validate_repo.py")
-
-    # --- Step 1: Install dependencies ---
+    # --- Step 0: Install dependencies ---
     install_dependencies()
+
+    # --- Step 1: Pre-run repo validation ---
+    print_banner("1", "Pre-run validation — src/00_validate_repo.py")
+    run_script("00_validate_repo.py")
 
     # --- Step 2: Data collection (optional) ---
     skip_collection = ask_skip_collection()
 
     if skip_collection:
-        print_banner(2, "SKIPPED — src/01_collect_or_import.py")
+        print_banner("2", "SKIPPED — src/01_collect_or_import.py")
         print("  Using existing data/reviews_raw.jsonl")
     else:
-        print_banner(2, "Data collection — src/01_collect_or_import.py")
+        print_banner("2", "Data collection — src/01_collect_or_import.py")
         print("  Output: data/reviews_raw.jsonl, data/dataset_metadata.json")
         run_script("01_collect_or_import.py")
 
     # --- Step 3: Cleaning ---
-    print_banner(3, "Data cleaning — src/02_clean.py")
+    print_banner("3", "Data cleaning — src/02_clean.py")
     print("  Output: data/reviews_clean.jsonl")
     run_script("02_clean.py")
 
     # --- Step 4: Manual groups verification ---
-    print_banner(4, "Manual groups verification — src/03_manual_coding_template.py")
+    print_banner("4", "Manual groups verification — src/03_manual_coding_template.py")
     print("  Checks: data/review_groups_manual.json")
     run_script("03_manual_coding_template.py")
 
     # --- Step 5: Manual personas verification ---
-    print_banner(5, "Manual personas verification — src/04_personas_manual.py")
+    print_banner("5", "Manual personas verification — src/04_personas_manual.py")
     print("  Checks: personas/personas_manual.json")
     run_script("04_personas_manual.py")
 
     # --- Step 6: Automated grouping + personas ---
-    print_banner(6, "Automated grouping + personas — src/05_personas_auto.py")
+    print_banner("6", "Automated grouping + personas — src/05_personas_auto.py")
     print("  Output: data/review_groups_auto.json")
     print("          personas/personas_auto.json")
     print("          prompts/prompt_auto.json")
     run_script("05_personas_auto.py")
 
     # --- Step 7: Automated spec generation ---
-    print_banner(7, "Automated spec generation — src/06_spec_generate.py")
+    print_banner("7", "Automated spec generation — src/06_spec_generate.py")
     print("  Output: spec/spec_auto.md")
     run_script("06_spec_generate.py")
 
     # --- Step 8: Automated test generation ---
-    print_banner(8, "Automated test generation — src/07_tests_generate.py")
+    print_banner("8", "Automated test generation — src/07_tests_generate.py")
     print("  Output: tests/tests_auto.json")
     run_script("07_tests_generate.py")
 
     # --- Step 9: Metrics ---
-    print_banner(9, "Metrics computation — src/08_metrics.py --all")
+    print_banner("9", "Metrics computation — src/08_metrics.py --all")
     print("  Output: metrics/metrics_auto.json")
     print("          metrics/metrics_manual.json (if manual pipeline complete)")
     print("          metrics/metrics_hybrid.json (if hybrid pipeline complete)")
