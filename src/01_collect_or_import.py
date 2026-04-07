@@ -1,5 +1,7 @@
 """imports or reads your raw dataset; if you scraped, include scraper here"""
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 Collect Google Play reviews for the assigned app and save them to data/reviews_raw.jsonl.
 
@@ -18,7 +20,6 @@ Run:
     python src/01_collect_or_import.py
 """
 
-from __future__ import annotations
 
 import json
 from pathlib import Path
