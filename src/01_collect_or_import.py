@@ -1,7 +1,6 @@
-"""imports or reads your raw dataset; if you scraped, include scraper here"""
 #!/usr/bin/env python3
 from __future__ import annotations
-
+"""imports or reads your raw dataset; if you scraped, include scraper here"""
 """
 Collect Google Play reviews for the assigned app and save them to data/reviews_raw.jsonl.
 
@@ -10,8 +9,8 @@ App used here:
     https://play.google.com/store/apps/details?id=de.moodpath.android&hl=en_CA
 
 Output:
-    data/reviews_raw.jsonl          – one JSON object per line, each representing a single review
-    data/dataset_metadata.json      – summary info about the collection run (app details, counts, notes)
+    data/reviews_raw.jsonl          - one JSON object per line, each representing a single review
+    data/dataset_metadata.json      - summary info about the collection run (app details, counts, notes)
 
 Install first:
     pip install google-play-scraper
@@ -19,7 +18,6 @@ Install first:
 Run:
     python src/01_collect_or_import.py
 """
-
 
 import json
 from pathlib import Path
@@ -133,9 +131,10 @@ def normalize_review(raw_review: Dict[str, Any], index: int) -> Dict[str, Any]:
     review_id = raw_review.get("reviewId")
 
     return {
-        # Use the Google-assigned review ID when available; otherwise generate
-        # a zero-padded ID like "generated_000001" so every record has one.
-        "review_id": review_id if review_id else f"generated_{index:06d}",
+        # Use a simple sequential ID (rev_1, rev_2, …) instead of the
+        # Google-assigned UUID so that IDs are short and easy to reference
+        # in manual and hybrid coding files.
+        "review_id": f"rev_{index}",
         "app_id": APP_ID,
         "app_url": APP_URL,
         "user_name": user_name,
