@@ -128,3 +128,6 @@ Both scripts were designed this way because the manual work was already complete
 | `metrics/metrics_summary.json` | Side-by-side comparison of all three pipelines |
 | `reflection/reflection.md` | Final project reflection |
  
+## Reproducibility
+ 
+This repository is fully notebook reproducible by running `python3 src/run_all.py` and typing `Y` when prompted to skip data collection. This keeps the existing `reviews_raw.jsonl` intact and regenerates all downstream outputs (cleaning, grouping, personas, specs, tests, and metrics) from scratch without any manual setup.
