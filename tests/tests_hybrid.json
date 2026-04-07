@@ -1,16 +1,379 @@
 {
-  "tests": [
-    {
-      "test_id": "T_hybrid_1",
-      "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
-      "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
-      ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
-    }
-  ]
+    "tests": [
+        {
+            "test_id": "T_hybrid_1",
+            "requirement_id": "FR_hybrid_1",
+            "scenario": "Display at least 3 selectable emotion options during check-in",
+            "steps": [
+                "Log in as a valid user",
+                "Open a new check-in",
+                "Navigate to the emotion-selection step",
+                "Count the number of selectable emotion options shown"
+            ],
+            "expected_result": "At least 3 selectable emotion options are displayed.",
+            "notes": "Reduced the required emotion count to 3 and removed the category-selection assumption because the hybrid requirement only requires at least 3 selectable emotion options during check-in."
+        },
+        {
+            "test_id": "T_hybrid_2",
+            "requirement_id": "FR_hybrid_1",
+            "scenario": "Select 1 emotion option during check-in",
+            "steps": [
+                "Log in as a valid user",
+                "Open a new check-in",
+                "Navigate to the emotion-selection step",
+                "Select 1 displayed emotion option"
+            ],
+            "expected_result": "The selected emotion option is accepted by the system and remains selected.",
+            "notes": "Changed the scenario to verify that one emotion can actually be selected because the hybrid requirement tests selection behavior, not what happens when no category is chosen."
+        },
+        {
+            "test_id": "T_hybrid_3",
+            "requirement_id": "FR_hybrid_2",
+            "scenario": "Display two completed check-ins in chronological order",
+            "steps": [
+                "Log in as a valid user",
+                "Create and submit 2 check-ins at different times",
+                "Open the history page"
+            ],
+            "expected_result": "The 2 completed check-ins are displayed in chronological order by date and time.",
+            "notes": "Replaced the weekly graph check with chronological history verification because the hybrid requirement requires ordered check-in history, not a graph."
+        },
+        {
+            "test_id": "T_hybrid_4",
+            "requirement_id": "FR_hybrid_2",
+            "scenario": "Display multiple completed check-ins in chronological order after app reload",
+            "steps": [
+                "Log in as a valid user",
+                "Create and submit 3 check-ins on different dates",
+                "Close and reopen the app",
+                "Open the history page"
+            ],
+            "expected_result": "All 3 completed check-ins are displayed in chronological order by date and time.",
+            "notes": "Expanded the history scenario to 3 entries and added app reload to confirm that chronological ordering still holds with more than the minimum number of saved check-ins."
+        },
+        {
+            "test_id": "T_hybrid_5",
+            "requirement_id": "FR_hybrid_3",
+            "scenario": "Complete a standard check-in without entering free-text content",
+            "steps": [
+                "Log in as a valid user",
+                "Open a standard check-in",
+                "Answer the provided prompts",
+                "Leave all free-text fields blank",
+                "Submit the check-in"
+            ],
+            "expected_result": "The check-in is submitted successfully without any mandatory free-text input.",
+            "notes": "Removed the old insights-oriented behavior and changed the test to verify that a prompted check-in can be submitted without mandatory free-text input, which is the exact hybrid requirement."
+        },
+        {
+            "test_id": "T_hybrid_6",
+            "requirement_id": "FR_hybrid_3",
+            "scenario": "Submit a prompted check-in when no free-text field is completed",
+            "steps": [
+                "Log in as a valid user",
+                "Open a standard check-in",
+                "Answer only the required prompted questions",
+                "Submit the check-in"
+            ],
+            "expected_result": "The system accepts the check-in submission without requiring any free-text journal entry.",
+            "notes": "Focused the test on submitting prompted responses only because the hybrid requirement is specifically about not requiring a free-text journal entry."
+        },
+        {
+            "test_id": "T_hybrid_7",
+            "requirement_id": "FR_hybrid_4",
+            "scenario": "Generate a summary report for a selected date range with two completed check-ins",
+            "steps": [
+                "Log in as a valid user",
+                "Create and submit 2 check-ins inside the target date range",
+                "Open the summary report feature",
+                "Select the start date and end date that include both check-ins"
+            ],
+            "expected_result": "The system displays a report containing the selected start date, the selected end date, and a check-in count of 2.",
+            "notes": "Replaced the subscription-change scenario with date-range report generation because the hybrid requirement now covers summary reports instead of subscription management."
+        },
+        {
+            "test_id": "T_hybrid_8",
+            "requirement_id": "FR_hybrid_4",
+            "scenario": "Generate a summary report for a selected date range with five completed check-ins",
+            "steps": [
+                "Log in as a valid user",
+                "Create and submit 5 check-ins inside the target date range",
+                "Open the summary report feature",
+                "Select the start date and end date that include all 5 check-ins"
+            ],
+            "expected_result": "The system displays a report containing the selected start date, the selected end date, and a check-in count of 5.",
+            "notes": "Added a second report-generation case with 5 check-ins so the test verifies that the report count changes correctly with a larger dataset."
+        },
+        {
+            "test_id": "T_hybrid_9",
+            "requirement_id": "FR_hybrid_5",
+            "scenario": "Confirm check-in submission within 2 seconds",
+            "steps": [
+                "Log in as a valid user",
+                "Open a completed check-in ready for submission",
+                "Press the submit button",
+                "Measure the time until the confirmation message appears"
+            ],
+            "expected_result": "The confirmation message appears within 2 seconds after the submit button is pressed.",
+            "notes": "Kept the response-time measurement idea but moved it from emotion selection to check-in submission because the hybrid requirement measures confirmation time after pressing submit."
+        },
+        {
+            "test_id": "T_hybrid_10",
+            "requirement_id": "FR_hybrid_5",
+            "scenario": "Confirm check-in submission within 2 seconds after multiple prompt responses",
+            "steps": [
+                "Log in as a valid user",
+                "Open a check-in and answer all required prompts",
+                "Press the submit button",
+                "Measure the time until the confirmation message appears"
+            ],
+            "expected_result": "The confirmation message appears within 2 seconds after the submit button is pressed.",
+            "notes": "Removed the subjective usability check and kept only the measurable 2-second confirmation condition because the hybrid requirement must be fully testable."
+        },
+        {
+            "test_id": "T_hybrid_11",
+            "requirement_id": "FR_hybrid_6",
+            "scenario": "Free user completes a check-in and opens check-in history",
+            "steps": [
+                "Log in as a user without an active paid subscription",
+                "Complete and submit 1 check-in",
+                "Open the check-in history page"
+            ],
+            "expected_result": "The user can submit the check-in successfully and can open the saved check-in in the history page without any payment prompt.",
+            "notes": "Replaced the generic free-features count check with direct verification of the 3 free-tier functions required in the hybrid requirement: completing a check-in and opening history."
+        },
+        {
+            "test_id": "T_hybrid_12",
+            "requirement_id": "FR_hybrid_6",
+            "scenario": "Free user opens one summary page without payment",
+            "steps": [
+                "Log in as a user without an active paid subscription",
+                "Ensure at least 1 check-in already exists for the user",
+                "Open the summary page"
+            ],
+            "expected_result": "The summary page opens without requiring payment.",
+            "notes": "Changed the scenario to test access to one summary page without payment because the hybrid requirement explicitly includes summary-page access for unpaid users."
+        },
+        {
+            "test_id": "T_hybrid_13",
+            "requirement_id": "FR_hybrid_7",
+            "scenario": "Display price, billing period, and locked-feature list for one premium plan",
+            "steps": [
+                "Log in as a valid user",
+                "Open the pricing page",
+                "Locate 1 premium plan listing"
+            ],
+            "expected_result": "The premium plan listing displays its price, billing period, and at least 1 locked feature.",
+            "notes": "Kept the pricing-page scenario but narrowed the verification to the exact required fields: price, billing period, and at least one locked feature."
+        },
+        {
+            "test_id": "T_hybrid_14",
+            "requirement_id": "FR_hybrid_7",
+            "scenario": "Display required pricing details for each premium plan shown on the page",
+            "steps": [
+                "Open the pricing page",
+                "Review each premium plan shown on the page"
+            ],
+            "expected_result": "Each premium plan shown on the page displays a price, a billing period, and at least 1 locked feature.",
+            "notes": "Kept the page-review idea but changed the expected result so every displayed premium plan must show the same required details defined in the hybrid requirement."
+        },
+        {
+            "test_id": "T_hybrid_15",
+            "requirement_id": "FR_hybrid_8",
+            "scenario": "Unpaid user selects locked premium insight content from the insights page",
+            "steps": [
+                "Log in as a user without an active paid subscription",
+                "Open the insights page",
+                "Select locked premium insight content"
+            ],
+            "expected_result": "The system displays a lock message and does not display the locked insight content.",
+            "notes": "Changed the expected behavior from showing a free alternative or summary to blocking locked premium insight content because the hybrid requirement now requires lock enforcement."
+        },
+        {
+            "test_id": "T_hybrid_16",
+            "requirement_id": "FR_hybrid_8",
+            "scenario": "Unpaid user attempts to open locked premium insight content directly",
+            "steps": [
+                "Log in as a user without an active paid subscription",
+                "Open a direct link or entry point to locked premium insight content"
+            ],
+            "expected_result": "The system displays a lock message and does not display the locked insight content.",
+            "notes": "Changed the second premium-insight test to verify the same lock behavior through a direct access path so the requirement is tested consistently across entry points."
+        },
+        {
+            "test_id": "T_hybrid_17",
+            "requirement_id": "FR_hybrid_9",
+            "scenario": "Display one instruction block before first use of the mood tracking feature",
+            "steps": [
+                "Log in as a valid user who has never opened the mood tracking feature",
+                "Open the mood tracking feature for the first time"
+            ],
+            "expected_result": "The system displays 1 instruction block before the user submits data for the mood tracking feature.",
+            "notes": "Replaced vague 'guidance for specific needs' wording with a measurable first-use instruction-block check because the hybrid requirement requires one instruction block before first use."
+        },
+        {
+            "test_id": "T_hybrid_18",
+            "requirement_id": "FR_hybrid_9",
+            "scenario": "Display one instruction block before first use of another tracking feature",
+            "steps": [
+                "Log in as a valid user who has never opened the sleep tracking feature",
+                "Open the sleep tracking feature for the first time"
+            ],
+            "expected_result": "The system displays 1 instruction block before the user submits data for the sleep tracking feature.",
+            "notes": "Kept a second feature-based scenario, but changed it to verify first-use instruction display for another tracking feature so the requirement is not tied to only one feature."
+        },
+        {
+            "test_id": "T_hybrid_19",
+            "requirement_id": "FR_hybrid_10",
+            "scenario": "Submitted check-in remains after closing and reopening the app",
+            "steps": [
+                "Log in as a valid user",
+                "Submit 1 check-in",
+                "Close the app",
+                "Reopen the app",
+                "Open the check-in history page"
+            ],
+            "expected_result": "The submitted check-in appears in check-in history after the app is reopened.",
+            "notes": "Replaced the app-rating test with a persistence test because the hybrid requirement now measures whether submitted check-ins remain after closing and reopening the app."
+        },
+        {
+            "test_id": "T_hybrid_20",
+            "requirement_id": "FR_hybrid_10",
+            "scenario": "Multiple submitted check-ins remain after closing and reopening the app",
+            "steps": [
+                "Log in as a valid user",
+                "Submit 3 check-ins",
+                "Close the app",
+                "Reopen the app",
+                "Open the check-in history page"
+            ],
+            "expected_result": "All 3 submitted check-ins appear in check-in history after the app is reopened.",
+            "notes": "Changed the second reliability test from rating validation to multi-entry persistence so it checks the same hybrid requirement under a larger saved-data case."
+        },
+        {
+            "test_id": "T_hybrid_21",
+            "requirement_id": "FR_hybrid_11",
+            "scenario": "Display at least three predefined discussion prompts on therapy-preparation page",
+            "steps": [
+                "Log in as a valid user",
+                "Open the therapy-preparation page",
+                "Count the number of predefined discussion prompts shown"
+            ],
+            "expected_result": "At least 3 predefined discussion prompts are displayed.",
+            "notes": "Removed topic-selection dependency and changed the scenario to count predefined prompts because the hybrid requirement requires at least 3 prompts on the therapy-preparation page."
+        },
+        {
+            "test_id": "T_hybrid_22",
+            "requirement_id": "FR_hybrid_11",
+            "scenario": "Display therapy-preparation prompts without requiring a topic selection",
+            "steps": [
+                "Log in as a valid user",
+                "Open the therapy-preparation page"
+            ],
+            "expected_result": "At least 3 predefined discussion prompts are displayed on page load.",
+            "notes": "Changed the negative 'no topic selected' case into a page-load case because the hybrid requirement expects predefined prompts to appear without requiring topic selection first."
+        },
+        {
+            "test_id": "T_hybrid_23",
+            "requirement_id": "FR_hybrid_12",
+            "scenario": "Display at least one resource item for selected support topic anxiety",
+            "steps": [
+                "Log in as a valid user",
+                "Open the resources page",
+                "Select the support topic anxiety"
+            ],
+            "expected_result": "At least 1 resource item associated with anxiety is displayed.",
+            "notes": "Kept the support-topic structure but made the expected result measurable by requiring at least 1 resource item for the selected topic anxiety."
+        },
+        {
+            "test_id": "T_hybrid_24",
+            "requirement_id": "FR_hybrid_12",
+            "scenario": "Display at least one resource item for selected support topic depression",
+            "steps": [
+                "Log in as a valid user",
+                "Open the resources page",
+                "Select the support topic depression"
+            ],
+            "expected_result": "At least 1 resource item associated with depression is displayed.",
+            "notes": "Kept the second support-topic case and made it measurable in the same way so the test verifies topic-to-resource behavior for depression as well."
+        },
+        {
+            "test_id": "T_hybrid_25",
+            "requirement_id": "FR_hybrid_13",
+            "scenario": "Display mood entries from the previous 30 days",
+            "steps": [
+                "Log in as a valid user",
+                "Ensure the user has at least 2 recorded mood entries within the previous 30 days",
+                "Open the mood-history page"
+            ],
+            "expected_result": "All recorded mood entries from the previous 30 days are displayed.",
+            "notes": "Removed the graph requirement and changed the test to verify that all mood entries from the previous 30 days are displayed, which matches the hybrid requirement exactly."
+        },
+        {
+            "test_id": "T_hybrid_26",
+            "requirement_id": "FR_hybrid_13",
+            "scenario": "Exclude mood entries older than 30 days from the displayed history",
+            "steps": [
+                "Log in as a valid user",
+                "Ensure the user has 1 recorded mood entry within the previous 30 days and 1 recorded mood entry older than 30 days",
+                "Open the mood-history page"
+            ],
+            "expected_result": "The entry from the previous 30 days is displayed and the entry older than 30 days is not displayed.",
+            "notes": "Changed the no-data case into a 30-day boundary test because the hybrid requirement is specifically about which entries are included in the previous 30 days."
+        },
+        {
+            "test_id": "T_hybrid_27",
+            "requirement_id": "FR_hybrid_14",
+            "scenario": "Create and edit one daily reminder",
+            "steps": [
+                "Log in as a valid user",
+                "Open reminder settings",
+                "Create 1 daily reminder",
+                "Change the reminder time",
+                "Save the updated reminder"
+            ],
+            "expected_result": "The reminder is created successfully and the updated reminder time is saved.",
+            "notes": "Changed the reminder test from generic reminder availability to create-and-edit behavior because the hybrid requirement explicitly requires creating and editing a daily reminder."
+        },
+        {
+            "test_id": "T_hybrid_28",
+            "requirement_id": "FR_hybrid_14",
+            "scenario": "Disable one existing daily reminder",
+            "steps": [
+                "Log in as a valid user",
+                "Open reminder settings",
+                "Locate 1 existing daily reminder",
+                "Disable the reminder"
+            ],
+            "expected_result": "The selected daily reminder is disabled successfully.",
+            "notes": "Changed the second reminder test to focus on disabling an existing reminder because the hybrid requirement separately requires disable behavior."
+        },
+        {
+            "test_id": "T_hybrid_29",
+            "requirement_id": "FR_hybrid_15",
+            "scenario": "Display the most frequently selected mood option for a valid date range",
+            "steps": [
+                "Log in as a valid user",
+                "Create or load at least 7 completed check-ins in a selected date range",
+                "Ensure one mood option has the highest selection count in that range",
+                "Open the pattern or summary view for that date range"
+            ],
+            "expected_result": "The system displays the mood option with the highest selection count in the selected date range.",
+            "notes": "Replaced the vague 'two patterns or trends' check with verification of the highest-count mood option because the hybrid requirement defines pattern output as the most frequently selected mood option."
+        },
+        {
+            "test_id": "T_hybrid_30",
+            "requirement_id": "FR_hybrid_15",
+            "scenario": "Update the displayed most frequent mood option when the date range changes",
+            "steps": [
+                "Log in as a valid user",
+                "Create or load at least 7 completed check-ins in date range A and at least 7 completed check-ins in date range B",
+                "Ensure date range A and date range B have different highest-count mood options",
+                "Open the pattern or summary view for date range A",
+                "Change the selected range to date range B"
+            ],
+            "expected_result": "The system displays the highest-count mood option for date range A first, then displays the highest-count mood option for date range B after the range is changed.",
+            "notes": "Changed the minimal-data trend scenario into a date-range change scenario so the test verifies that the displayed highest-count mood option updates when the selected range changes."
+        }
+    ]
 }
