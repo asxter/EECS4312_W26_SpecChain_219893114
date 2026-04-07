@@ -12,6 +12,18 @@ High-level workflow:
     5. Use the LLM to merge micro-clusters into a smaller number of final groups
     6. Use the LLM to generate one user persona per final group
     7. Save everything to disk
+    Design choices:
+    If we cluster reviews directly into 5 groups, the groups end up messy
+    because unrelated reviews get mixed together.  Instead, we first split
+    reviews into 18 small clusters using KMeans + TF-IDF so that each small
+    cluster contains reviews that use similar words.  Then we ask an LLM to
+    read those small clusters and merge the ones that share the same topic
+    into 5 final groups.  This gives us much cleaner, more meaningful groups
+    than KMeans alone could produce.  We use Groq with Llama 4 Scout because
+    it is fast and free, and we set the temperature low (0.2) so the model
+    returns consistent, well-formatted JSON every time.
+ 
+
 
 Outputs:
     - data/review_groups_auto.json   – the final grouped reviews with themes
